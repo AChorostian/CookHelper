@@ -5,3 +5,7 @@ CookHelper/obj/*
 *.cache
 *.props
 *.targets
+.vs*
+CookHelper.Android/bin/*
+CookHelper.iOS/bin/*
+CookHelper/bin/*
