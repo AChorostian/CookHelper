@@ -1,0 +1,7 @@
+CookHelper.Android/obj/*
+CookHelper.iOS/obj/*
+CookHelper/obj/*
+
+*.cache
+*.props
+*.targets
