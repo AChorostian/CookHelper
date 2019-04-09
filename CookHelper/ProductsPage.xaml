@@ -4,7 +4,41 @@
              xmlns:local="clr-namespace:CookHelper" 
              x:Class="CookHelper.ProductsPage"
              xmlns:controls="clr-namespace:CookHelper.Controls;assembly=CookHelper">
-
+    
+    <NavigationPage.TitleView> 
+        <Grid BackgroundColor="#985321">
+            <Grid x:Name="searchBar" TranslationY="-44">
+                <controls:CustomSearchBar x:Name="searchBox" 
+                                          Margin="0,0,60,0"/>
+                <Button Text="Anuluj" 
+                        FontSize="17" 
+                        TextColor="White" 
+                        HorizontalOptions="End" 
+                        Margin="0,0,8,0" />
+            </Grid>
+            <Grid x:Name="defaultBar">
+                <Label Text="Produkty" 
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center" 
+                       FontSize="17" 
+                       FontAttributes="Bold" 
+                       TextColor="White" />
+                <Button Image="icons8-search.png" 
+                        HorizontalOptions="End" 
+                        VerticalOptions="Center" 
+                        HeightRequest="22" 
+                        WidthRequest="22" 
+                        Margin="0,0,54,0"/>
+                <Button Image="icons8-plus_math.png" 
+                        HorizontalOptions="End" 
+                        VerticalOptions="Center" 
+                        HeightRequest="28" 
+                        WidthRequest="28" 
+                        Margin="0,0,4,0"/>
+            </Grid>
+        </Grid>
+    </NavigationPage.TitleView> 
+    
     <StackLayout>
         <Label Text="This is ProductsPage : NavigationPage" 
                HorizontalOptions="Center" 
