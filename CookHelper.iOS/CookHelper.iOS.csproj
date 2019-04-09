@@ -69,6 +69,7 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CustomRenderers\CustomSearchBarRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -133,5 +134,12 @@
       <Project>{5EBAC5AD-CAE6-4970-8267-E4BB6B9DB3B3}</Project>
       <Name>CookHelper</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CustomRenderers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icons8-plus_math.png" />
+    <BundleResource Include="Resources\icons8-search.png" />
   </ItemGroup>
 </Project>
