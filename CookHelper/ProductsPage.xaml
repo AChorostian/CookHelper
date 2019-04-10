@@ -14,7 +14,8 @@
                         FontSize="17" 
                         TextColor="White" 
                         HorizontalOptions="End" 
-                        Margin="0,0,8,0" />
+                        Margin="0,0,8,0" 
+                        Clicked="SearchBarHide"/>
             </Grid>
             <Grid x:Name="defaultBar">
                 <Label Text="Produkty" 
@@ -28,7 +29,8 @@
                         VerticalOptions="Center" 
                         HeightRequest="22" 
                         WidthRequest="22" 
-                        Margin="0,0,54,0"/>
+                        Margin="0,0,54,0"
+                        Clicked="SearchBarShow"/>
                 <Button Image="icons8-plus_math.png" 
                         HorizontalOptions="End" 
                         VerticalOptions="Center" 
