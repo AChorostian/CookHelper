@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace CookHelper
+namespace CookHelper.Views
 {
     [DesignTimeVisible(true)]
     public partial class ProductsPage : ContentPage
