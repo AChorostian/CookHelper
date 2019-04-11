@@ -41,9 +41,16 @@
         </Grid>
     </NavigationPage.TitleView> 
     
-    <StackLayout>
+    <StackLayout BackgroundColor="White">
+        
         <Label Text="This is ProductsPage : NavigationPage" 
                HorizontalOptions="Center" 
                VerticalOptions="CenterAndExpand" />
+        
+        <views:CustomTabBar />
     </StackLayout>
+    
+
+    
+    
 </ContentPage>

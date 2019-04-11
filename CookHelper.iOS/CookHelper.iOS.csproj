@@ -141,5 +141,8 @@
   <ItemGroup>
     <BundleResource Include="Resources\icons8-plus_math.png" />
     <BundleResource Include="Resources\icons8-search.png" />
+    <BundleResource Include="Resources\tab_products.png" />
+    <BundleResource Include="Resources\tab_recipes.png" />
+    <BundleResource Include="Resources\tab_settings.png" />
   </ItemGroup>
 </Project>
