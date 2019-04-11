@@ -21,4 +21,10 @@
     <Folder Include="ViewModels\" />
     <Folder Include="Services\" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\CustomTabBar.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\CustomTabBar.xaml.cs" />
+  </ItemGroup>
 </Project>

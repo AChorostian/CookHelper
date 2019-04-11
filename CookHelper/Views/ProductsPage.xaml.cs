@@ -34,5 +34,10 @@ namespace CookHelper.Views
             );
         }
 
+        void Click(object sender, EventArgs e)
+        {
+            DisplayAlert("tytul", "wiadomosc", "anuluj");
+        }
+
     }
 }
