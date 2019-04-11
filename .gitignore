@@ -1,11 +1,16 @@
 CookHelper.Android/obj/*
-CookHelper.iOS/obj/*
-CookHelper/obj/*
+CookHelper.Android/bin/*
 
+CookHelper.iOS/obj/*
+CookHelper.iOS/bin/*
+
+CookHelper/obj/*
+CookHelper/bin/*
+
+.vs*
 *.cache
 *.props
 *.targets
-.vs*
-CookHelper.Android/bin/*
-CookHelper.iOS/bin/*
-CookHelper/bin/*
+*.DS_Store
+CookHelper/.DS_Store
+CookHelper/.DS_Store
