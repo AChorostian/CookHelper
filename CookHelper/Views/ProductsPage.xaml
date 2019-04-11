@@ -1,83 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:views="clr-namespace:CookHelper.Views" 
-             x:Class="CookHelper.Views.ProductsPage"
-             xmlns:controls="clr-namespace:CookHelper.Controls;assembly=CookHelper">
-    
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:views="clr-namespace:CookHelper.Views" 
+    x:Class="CookHelper.Views.ProductsPage"
+    xmlns:controls="clr-namespace:CookHelper.Controls;assembly=CookHelper"
+    >
     <NavigationPage.TitleView> 
         <Grid BackgroundColor="#985321">
             <Grid x:Name="searchBar" TranslationY="-44">
-                <controls:CustomSearchBar x:Name="searchBox" 
-                                          Margin="0,0,60,0"/>
-                <Button Text="Anuluj" 
-                        FontSize="17" 
-                        TextColor="White" 
-                        HorizontalOptions="End" 
-                        Margin="0,0,8,0" 
-                        Clicked="SearchBarHide"/>
+                <controls:CustomSearchBar 
+                    x:Name="searchBox" 
+                    Margin="0,0,60,0"
+                />
+                <Button 
+                    Text="Anuluj" 
+                    FontSize="17" 
+                    TextColor="White" 
+                    HorizontalOptions="End" 
+                    Margin="0,0,8,0" 
+                    Clicked="NavBar_DefaultBar"
+                />
             </Grid>
             <Grid x:Name="defaultBar">
-                <Label Text="Produkty" 
-                       HorizontalOptions="Center" 
-                       VerticalOptions="Center" 
-                       FontSize="17" 
-                       FontAttributes="Bold" 
-                       TextColor="White" />
-                <Button Image="icons8-search.png" 
-                        HorizontalOptions="End" 
-                        VerticalOptions="Center" 
-                        HeightRequest="22" 
-                        WidthRequest="22" 
-                        Margin="0,0,54,0"
-                        Clicked="SearchBarShow"/>
-                <Button Image="icons8-plus_math.png" 
-                        HorizontalOptions="End" 
-                        VerticalOptions="Center" 
-                        HeightRequest="28" 
-                        WidthRequest="28" 
-                        Margin="0,0,4,0"/>
+                <Label 
+                    Text="Produkty" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center" 
+                    FontSize="17" 
+                    FontAttributes="Bold" 
+                    TextColor="White" 
+                />
+                <Button 
+                    Image="nav_search.png" 
+                    HorizontalOptions="End" 
+                    WidthRequest="44" 
+                    Margin="0,0,54,0"
+                    Clicked="NavBar_SearchBar"
+                />
+                <Button 
+                    Image="nav_add.png" 
+                    HorizontalOptions="End" 
+                    WidthRequest="44" 
+                    Margin="0,0,4,0"
+                    Clicked="NavBar_AddProduct"
+                />
             </Grid>
         </Grid>
     </NavigationPage.TitleView> 
-    
     <StackLayout BackgroundColor="White">
-        
-        <Label Text="This is ProductsPage : NavigationPage" 
-               HorizontalOptions="Center" 
-               VerticalOptions="CenterAndExpand" />
-        
-        <Grid BackgroundColor="#985321" 
-              VerticalOptions="End"
-              HeightRequest="50" 
-              HorizontalOptions="Fill" 
-              ColumnSpacing="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
+        <Label 
+            Text="This is ProductsPage : NavigationPage" 
+            HorizontalOptions="Center" 
+            VerticalOptions="CenterAndExpand"
+        />
+        <Grid 
+            BackgroundColor="#985321" 
+            VerticalOptions="End"
+            HeightRequest="50" 
+            ColumnSpacing="0"
+            >
             <Grid Grid.Column="0" Padding="3">
-                <Image HeightRequest="32" WidthRequest="32" Source="tab_products.png" HorizontalOptions="Center" VerticalOptions="Start"/>
-                <Label Text="Produkty" HorizontalOptions="Center" VerticalOptions="End" FontSize="10" TextColor="White"/>
+                <Image 
+                    HeightRequest="32" 
+                    WidthRequest="32" 
+                    Source="tab_products.png" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Start"
+                />
+                <Label 
+                    Text="Produkty" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="End" 
+                    FontSize="10" 
+                    TextColor="White"
+                />
                 <Grid.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="Click" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                    <TapGestureRecognizer Tapped="TabBar_ProductsPage" />
                 </Grid.GestureRecognizers>
             </Grid>
             <Grid Grid.Column="1" Padding="3">
-                <Image HeightRequest="32" WidthRequest="32" Source="tab_recipes.png" HorizontalOptions="Center" VerticalOptions="Start"/>
-                <Label Text="Przepisy" HorizontalOptions="Center" VerticalOptions="End" FontSize="10" TextColor="White"/>
+                <Image 
+                    HeightRequest="32" 
+                    WidthRequest="32" 
+                    Source="tab_recipes.png" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Start"
+                />
+                <Label 
+                    Text="Przepisy" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="End" 
+                    FontSize="10" 
+                    TextColor="White"
+                />
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TabBar_RecipesPage" />
+                </Grid.GestureRecognizers>
             </Grid>
             <Grid Grid.Column="2" Padding="3">
-                <Image HeightRequest="32" WidthRequest="32" Source="tab_settings.png" HorizontalOptions="Center" VerticalOptions="Start"/>
-                <Label Text="Ustawienia" HorizontalOptions="Center" VerticalOptions="End" FontSize="10" TextColor="White"/>
+                <Image 
+                    HeightRequest="32"
+                    WidthRequest="32" 
+                    Source="tab_settings.png" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Start"
+                />
+                <Label 
+                    Text="Ustawienia" 
+                    HorizontalOptions="Center"
+                    VerticalOptions="End" 
+                    FontSize="10" 
+                    TextColor="White"
+                />
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TabBar_SettingsPage" />
+                </Grid.GestureRecognizers>
             </Grid>
         </Grid>
-        
-        
     </StackLayout>
-    
-
-    
-    
 </ContentPage>

@@ -16,7 +16,7 @@ namespace CookHelper.Views
             InitializeComponent();
         }
 
-        async void SearchBarHide(object sender, System.EventArgs e)
+        async void NavBar_DefaultBar(object sender, System.EventArgs e)
         {
             searchBox.Unfocus();
             await Task.WhenAll(
@@ -25,7 +25,7 @@ namespace CookHelper.Views
             );
         }
 
-        async void SearchBarShow(object sender, System.EventArgs e)
+        async void NavBar_SearchBar(object sender, System.EventArgs e)
         {
             searchBox.Focus();
             await Task.WhenAll(
@@ -34,9 +34,28 @@ namespace CookHelper.Views
             );
         }
 
-        void Click(object sender, EventArgs e)
+        void NavBar_AddProduct(object sender, System.EventArgs e)
         {
-            DisplayAlert("tytul", "wiadomosc", "anuluj");
+            // todo switch page to AddProductPage here
+            DisplayAlert("Switch page", "AddProductPage", "ok");
+        }
+
+        void TabBar_ProductsPage(object sender, EventArgs e)
+        {
+            // todo switch page to ProductsPage here
+            DisplayAlert("Switch page", "ProductsPage", "ok");
+        }
+
+        void TabBar_RecipesPage(object sender, EventArgs e)
+        {
+            // todo switch page to RecipesPage here
+            DisplayAlert("Switch page", "RecipesPage", "ok");
+        }
+
+        void TabBar_SettingsPage(object sender, EventArgs e)
+        {
+            // todo switch page to SettingsPage here
+            DisplayAlert("Switch page", "SettingsPage", "ok");
         }
 
     }
