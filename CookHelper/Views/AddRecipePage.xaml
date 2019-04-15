@@ -3,7 +3,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:views="clr-namespace:CookHelper.Views" 
-    x:Class="CookHelper.Views.AddProductPage"
+    x:Class="CookHelper.Views.AddRecipePage"
     xmlns:controls="clr-namespace:CookHelper.Controls;assembly=CookHelper"
     >
     <NavigationPage.TitleView> 
@@ -17,7 +17,7 @@
                 Clicked="NavBar_Cancel"
             />
             <Label 
-                Text="Nowy produkt" 
+                Text="Nowy przepis" 
                 HorizontalOptions="Center" 
                 VerticalOptions="Center" 
                 FontSize="17" 
@@ -37,7 +37,7 @@
     </NavigationPage.TitleView> 
     <StackLayout BackgroundColor="#e5d3b3">
         <Label 
-            Text="This is AddProductPage : NavigationPage" 
+            Text="This is AddRecipePage : NavigationPage" 
             HorizontalOptions="Center" 
             VerticalOptions="CenterAndExpand"
         />

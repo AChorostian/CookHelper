@@ -9,9 +9,9 @@ using Xamarin.Forms;
 namespace CookHelper.Views
 {
     [DesignTimeVisible(true)]
-    public partial class AddRecipePage : ContentPage
+    public partial class AddProductPage : ContentPage
     {
-        public AddRecipePage()
+        public AddProductPage()
         {
             InitializeComponent();
         }

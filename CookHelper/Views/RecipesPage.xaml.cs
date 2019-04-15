@@ -34,10 +34,9 @@ namespace CookHelper.Views
             );
         }
 
-        void NavBar_AddProduct(object sender, System.EventArgs e)
+        void NavBar_AddRecipe(object sender, System.EventArgs e)
         {
-            // todo switch page to AddProductPage here
-            DisplayAlert("Switch page", "AddProductPage", "ok");
+            Navigation.PushModalAsync(new NavigationPage(new AddRecipePage()));
         }
 
         void TabBar_ProductsPage(object sender, EventArgs e)

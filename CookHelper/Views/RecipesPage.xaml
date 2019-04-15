@@ -44,7 +44,7 @@
                     HorizontalOptions="End" 
                     WidthRequest="44" 
                     Margin="0,0,4,0"
-                    Clicked="NavBar_AddProduct"
+                    Clicked="NavBar_AddRecipe"
                 />
             </Grid>
         </Grid>
