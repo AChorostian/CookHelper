@@ -9,9 +9,9 @@ using Xamarin.Forms;
 namespace CookHelper.Views
 {
     [DesignTimeVisible(true)]
-    public partial class ProductsPage : ContentPage
+    public partial class RecipesPage : ContentPage
     {
-        public ProductsPage()
+        public RecipesPage()
         {
             InitializeComponent();
         }
@@ -40,14 +40,15 @@ namespace CookHelper.Views
             DisplayAlert("Switch page", "AddProductPage", "ok");
         }
 
-        void TabBar_ProductsPage(object sender, EventArgs e)
+        async void TabBar_ProductsPage(object sender, EventArgs e)
         {
-            // you are here ;)
+            // await pageTitle.TranslateTo(-200, 0, 500, Easing.CubicInOut);
+            App.Current.MainPage = new NavigationPage(new ProductsPage());
         }
 
         void TabBar_RecipesPage(object sender, EventArgs e)
         {
-            App.Current.MainPage = new NavigationPage(new RecipesPage());
+            // you are here ;)
         }
 
         void TabBar_SettingsPage(object sender, EventArgs e)
