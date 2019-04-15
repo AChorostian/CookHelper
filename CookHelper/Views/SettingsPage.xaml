@@ -21,10 +21,32 @@
     </NavigationPage.TitleView> 
     <StackLayout BackgroundColor="#e5d3b3">
         <Label 
-            Text="This is SettingsPage : NavigationPage" 
+            Text="Tu będą ustawienia:" 
             HorizontalOptions="Center" 
             VerticalOptions="CenterAndExpand"
         />
+        <Label 
+            Text="Jednostki wagi >" 
+            HorizontalOptions="Center" 
+            VerticalOptions="CenterAndExpand"
+        />
+        <Label 
+            Text="Jednostki objętości >" 
+            HorizontalOptions="Center" 
+            VerticalOptions="CenterAndExpand"
+        />
+        <Label 
+            Text="ilości sztuk >" 
+            HorizontalOptions="Center" 
+            VerticalOptions="CenterAndExpand"
+        />
+        
+        <Label 
+            Text="aktualizuj bazę automatycznie I/O" 
+            HorizontalOptions="Center" 
+            VerticalOptions="CenterAndExpand"
+        />
+        
         <Grid 
             BackgroundColor="#985321" 
             VerticalOptions="End"
