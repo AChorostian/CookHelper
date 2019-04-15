@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:views="clr-namespace:CookHelper.Views" 
+    x:Class="CookHelper.Views.AddProductPage"
+    xmlns:controls="clr-namespace:CookHelper.Controls;assembly=CookHelper"
+    >
+    <NavigationPage.TitleView> 
+        <Grid BackgroundColor="#985321">
+            <Button 
+                Text="Anuluj" 
+                FontSize="17" 
+                TextColor="White" 
+                HorizontalOptions="Start" 
+                Margin="8,0,8,0" 
+                Clicked="NavBar_Cancel"
+            />
+            <Label 
+                Text="Nowy produkt" 
+                HorizontalOptions="Center" 
+                VerticalOptions="Center" 
+                FontSize="17" 
+                FontAttributes="Bold" 
+                TextColor="White" 
+            />
+            <Button 
+                Text="Zapisz" 
+                FontSize="17" 
+                TextColor="#D18E69" 
+                HorizontalOptions="End" 
+                Margin="8,0,8,0" 
+                FontAttributes="Bold" 
+                Clicked="NavBar_Cancel"
+            />
+        </Grid>
+    </NavigationPage.TitleView> 
+    <StackLayout BackgroundColor="#e5d3b3">
+        <Label 
+            Text="This is AddProductPage : NavigationPage" 
+            HorizontalOptions="Center" 
+            VerticalOptions="CenterAndExpand"
+        />
+        
+    </StackLayout>
+</ContentPage>

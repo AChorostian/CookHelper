@@ -49,7 +49,7 @@
             </Grid>
         </Grid>
     </NavigationPage.TitleView> 
-    <StackLayout BackgroundColor="White">
+    <StackLayout BackgroundColor="#e5d3b3">
         <Label 
             Text="This is RecipesPage : NavigationPage" 
             HorizontalOptions="Center" 
