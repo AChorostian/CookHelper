@@ -52,8 +52,7 @@ namespace CookHelper.Views
 
         void TabBar_SettingsPage(object sender, EventArgs e)
         {
-            // todo switch page to SettingsPage here
-            DisplayAlert("Switch page", "SettingsPage", "ok");
+            App.Current.MainPage = new NavigationPage(new SettingsPage());
         }
 
     }

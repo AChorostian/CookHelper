@@ -40,9 +40,8 @@ namespace CookHelper.Views
             DisplayAlert("Switch page", "AddProductPage", "ok");
         }
 
-        async void TabBar_ProductsPage(object sender, EventArgs e)
+        void TabBar_ProductsPage(object sender, EventArgs e)
         {
-            // await pageTitle.TranslateTo(-200, 0, 500, Easing.CubicInOut);
             App.Current.MainPage = new NavigationPage(new ProductsPage());
         }
 
@@ -53,8 +52,7 @@ namespace CookHelper.Views
 
         void TabBar_SettingsPage(object sender, EventArgs e)
         {
-            // todo switch page to SettingsPage here
-            DisplayAlert("Switch page", "SettingsPage", "ok");
+            App.Current.MainPage = new NavigationPage(new SettingsPage());
         }
 
     }

@@ -141,5 +141,11 @@
   <ItemGroup>
     <BundleResource Include="Resources\nav_add.png" />
     <BundleResource Include="Resources\nav_search.png" />
+    <BundleResource Include="Resources\tab_products.png" />
+    <BundleResource Include="Resources\tab_products_active.png" />
+    <BundleResource Include="Resources\tab_recipes.png" />
+    <BundleResource Include="Resources\tab_recipes_active.png" />
+    <BundleResource Include="Resources\tab_settings.png" />
+    <BundleResource Include="Resources\tab_settings_active.png" />
   </ItemGroup>
 </Project>

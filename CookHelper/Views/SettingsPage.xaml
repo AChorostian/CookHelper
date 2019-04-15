@@ -3,54 +3,25 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:views="clr-namespace:CookHelper.Views" 
-    x:Class="CookHelper.Views.ProductsPage"
+    x:Class="CookHelper.Views.SettingsPage"
     xmlns:controls="clr-namespace:CookHelper.Controls;assembly=CookHelper"
     >
     <NavigationPage.TitleView> 
         <Grid BackgroundColor="#985321">
-            <Grid x:Name="searchBar" TranslationY="-44">
-                <controls:CustomSearchBar 
-                    x:Name="searchBox" 
-                    Margin="0,0,60,0"
-                />
-                <Button 
-                    Text="Anuluj" 
-                    FontSize="17" 
-                    TextColor="White" 
-                    HorizontalOptions="End" 
-                    Margin="0,0,8,0" 
-                    Clicked="NavBar_DefaultBar"
-                />
-            </Grid>
-            <Grid x:Name="defaultBar">
-                <Label 
-                    Text="Produkty" 
-                    HorizontalOptions="Center" 
-                    VerticalOptions="Center" 
-                    FontSize="17" 
-                    FontAttributes="Bold" 
-                    TextColor="White" 
-                />
-                <Button 
-                    Image="nav_search.png" 
-                    HorizontalOptions="End" 
-                    WidthRequest="44" 
-                    Margin="0,0,54,0"
-                    Clicked="NavBar_SearchBar"
-                />
-                <Button 
-                    Image="nav_add.png" 
-                    HorizontalOptions="End" 
-                    WidthRequest="44" 
-                    Margin="0,0,4,0"
-                    Clicked="NavBar_AddProduct"
-                />
-            </Grid>
+            <Label 
+                x:Name="pageTitle"
+                Text="Ustawienia" 
+                HorizontalOptions="Center" 
+                VerticalOptions="Center" 
+                FontSize="17" 
+                FontAttributes="Bold" 
+                TextColor="White" 
+            />
         </Grid>
     </NavigationPage.TitleView> 
     <StackLayout BackgroundColor="White">
         <Label 
-            Text="This is ProductsPage : NavigationPage" 
+            Text="This is SettingsPage : NavigationPage" 
             HorizontalOptions="Center" 
             VerticalOptions="CenterAndExpand"
         />
@@ -64,7 +35,7 @@
                 <Image 
                     HeightRequest="28" 
                     WidthRequest="28" 
-                    Source="tab_products_active.png" 
+                    Source="tab_products.png" 
                     HorizontalOptions="Center" 
                     VerticalOptions="Start"
                 />
@@ -102,7 +73,7 @@
                 <Image 
                     HeightRequest="28"
                     WidthRequest="28" 
-                    Source="tab_settings.png" 
+                    Source="tab_settings_active.png" 
                     HorizontalOptions="Center" 
                     VerticalOptions="Start"
                 />
