@@ -35,11 +35,57 @@
             />
         </Grid>
     </NavigationPage.TitleView> 
-    <StackLayout BackgroundColor="#e5d3b3">
-        <Label 
-            Text="This is AddProductPage : NavigationPage" 
-            HorizontalOptions="Center" 
-            VerticalOptions="CenterAndExpand"
-        />
+    <StackLayout BackgroundColor="#FFEFE8" Spacing="0">
+        <Grid BackgroundColor="#D18E69" Margin="0,36,0,0">
+            <Grid BackgroundColor="White" Margin="0,0.5,0,0.5">
+                <Editor Placeholder="Nazwa produktu" Margin="12,2" MaxLength="30"/>
+            </Grid>
+        </Grid>
+        
+        <Grid BackgroundColor="#D18E69" Margin="0,36,0,0">
+            <StackLayout BackgroundColor="White" Margin="0,0.5,0,0.5" Spacing="0"> 
+                
+                <Grid x:Name="first" HeightRequest="42" BackgroundColor="White">
+                    <Grid HeightRequest="42" VerticalOptions="End">
+                        <Editor VerticalOptions="Center" Margin="55,0,0,0" Placeholder="Masa (g)"/>
+                    </Grid>
+                    <Grid BackgroundColor="#D18E69" Margin="58,0,0,0" HeightRequest="0.5" VerticalOptions="Start" TranslationY="42"/>
+                    <Grid HeightRequest="42" VerticalOptions="Start" BackgroundColor="White">
+                        <Image Source="set_weight.png" Margin="16,8" HorizontalOptions="Start"/>
+                        <Label Text="Możliwe do zważenia" FontSize="17" Margin="60,0,0,0" VerticalOptions="Center" />
+                        <Switch HorizontalOptions="End" VerticalOptions="Center" Margin="16,0" Toggled="first_Toggled"/>
+                    </Grid>
+                </Grid>
+             
+                <Grid BackgroundColor="#D18E69" Margin="58,0,0,0" HeightRequest="0.5"/>
+                
+                <Grid x:Name="second" HeightRequest="42" BackgroundColor="White">
+                    <Grid HeightRequest="42" VerticalOptions="End">
+                        <Editor VerticalOptions="Center" Margin="55,0,0,0" Placeholder="Objętość (ml)"/>
+                    </Grid>
+                    <Grid BackgroundColor="#D18E69" Margin="58,0,0,0" HeightRequest="0.5" VerticalOptions="Start" TranslationY="42"/>
+                    <Grid HeightRequest="42" VerticalOptions="Start" BackgroundColor="White">
+                        <Image Source="set_volume.png" Margin="16,8" HorizontalOptions="Start"/>
+                        <Label Text="Możliwe do zmierzenia" FontSize="17" Margin="60,0,0,0" VerticalOptions="Center" />
+                        <Switch HorizontalOptions="End" VerticalOptions="Center" Margin="16,0" Toggled="second_Toggled"/>
+                    </Grid>
+                </Grid>
+
+                <Grid BackgroundColor="#D18E69" Margin="58,0,0,0" HeightRequest="0.5"/>
+                
+                <Grid x:Name="third" HeightRequest="42" BackgroundColor="White">
+                    <Grid HeightRequest="42" VerticalOptions="End">
+                        <Editor VerticalOptions="Center" Margin="55,0,0,0" Placeholder="Ilość sztuk"/>
+                    </Grid>
+                    <Grid BackgroundColor="#D18E69" Margin="58,0,0,0" HeightRequest="0.5" VerticalOptions="Start" TranslationY="42"/>
+                    <Grid HeightRequest="42" VerticalOptions="Start" BackgroundColor="White">
+                        <Image Source="set_amount.png" Margin="16,8" HorizontalOptions="Start"/>
+                        <Label Text="Możliwe do policzenia" FontSize="17" Margin="60,0,0,0" VerticalOptions="Center" />
+                        <Switch HorizontalOptions="End" VerticalOptions="Center" Margin="16,0" Toggled="third_Toggled"/>
+                    </Grid>
+                </Grid>
+                
+            </StackLayout>
+        </Grid>
     </StackLayout>
 </ContentPage>

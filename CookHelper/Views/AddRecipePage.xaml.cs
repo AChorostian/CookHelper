@@ -9,9 +9,9 @@ using Xamarin.Forms;
 namespace CookHelper.Views
 {
     [DesignTimeVisible(true)]
-    public partial class AddProductPage : ContentPage
+    public partial class AddRecipePage : ContentPage
     {
-        public AddProductPage()
+        public AddRecipePage()
         {
             InitializeComponent();
         }
@@ -20,5 +20,7 @@ namespace CookHelper.Views
         {
             Navigation.PopModalAsync();
         }
+
+
     }
 }
