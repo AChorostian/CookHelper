@@ -147,5 +147,9 @@
     <BundleResource Include="Resources\tab_recipes_active.png" />
     <BundleResource Include="Resources\tab_settings.png" />
     <BundleResource Include="Resources\tab_settings_active.png" />
+    <BundleResource Include="Resources\set_next.png" />
+    <BundleResource Include="Resources\set_amount.png" />
+    <BundleResource Include="Resources\set_volume.png" />
+    <BundleResource Include="Resources\set_weight.png" />
   </ItemGroup>
 </Project>

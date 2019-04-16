@@ -19,33 +19,56 @@
             />
         </Grid>
     </NavigationPage.TitleView> 
-    <StackLayout BackgroundColor="#e5d3b3">
-        <Label 
-            Text="Tu będą ustawienia:" 
-            HorizontalOptions="Center" 
-            VerticalOptions="CenterAndExpand"
-        />
-        <Label 
-            Text="Jednostki wagi >" 
-            HorizontalOptions="Center" 
-            VerticalOptions="CenterAndExpand"
-        />
-        <Label 
-            Text="Jednostki objętości >" 
-            HorizontalOptions="Center" 
-            VerticalOptions="CenterAndExpand"
-        />
-        <Label 
-            Text="ilości sztuk >" 
-            HorizontalOptions="Center" 
-            VerticalOptions="CenterAndExpand"
-        />
+    <StackLayout BackgroundColor="#e5d3b3" Spacing="0">
+
+        <Grid BackgroundColor="#D18E69" Margin="0,36,0,0">
+            <Grid BackgroundColor="#eae5dc" HeightRequest="68" Margin="0,0.5,0,0.5">
+                <Label
+                    Text="Zaloguj się do swojego konta"
+                    FontSize="17" 
+                    TextColor="#007DF9"
+                    Margin="60,0,0,0"
+                    VerticalOptions="Center"
+                />
+            </Grid>
+        </Grid>
         
-        <Label 
-            Text="aktualizuj bazę automatycznie I/O" 
-            HorizontalOptions="Center" 
-            VerticalOptions="CenterAndExpand"
-        />
+        <Grid BackgroundColor="#D18E69" Margin="0,36,0,0">
+            <Grid BackgroundColor="#eae5dc" HeightRequest="127" Margin="0,0.5,0,0.5"> 
+                <Grid HeightRequest="42" VerticalOptions="Start">
+                    <Image Source="set_weight.png" Margin="16,8" HorizontalOptions="Start"/>
+                    <Label Text="Jednostki wagi" FontSize="16" Margin="60,0,0,0" VerticalOptions="Center" />
+                    <Image Source="set_next.png" HorizontalOptions="End"/>
+                </Grid>
+             
+                <Grid BackgroundColor="#D18E69" Margin="58,42,0,0" HeightRequest="0.5" VerticalOptions="Start"/>
+                
+                <Grid HeightRequest="42" VerticalOptions="Start" Margin="0,42.5,0,0">
+                    <Image Source="set_volume.png" Margin="16,8" HorizontalOptions="Start"/>
+                    <Label Text="Jednostki objętości" FontSize="16" Margin="60,0,0,0" VerticalOptions="Center" />
+                    <Image Source="set_next.png" HorizontalOptions="End"/>
+                </Grid>
+                
+                <Grid BackgroundColor="#D18E69" Margin="58,84.5,0,0" HeightRequest="0.5" VerticalOptions="Start"/>
+                
+                <Grid HeightRequest="42" VerticalOptions="Start" Margin="0,85,0,0">
+                    <Image Source="set_amount.png" Margin="16,8" HorizontalOptions="Start"/>
+                    <Label Text="ilości sztuk" FontSize="16" Margin="60,0,0,0" VerticalOptions="Center" />
+                    <Image Source="set_next.png" HorizontalOptions="End"/>
+                </Grid>
+                
+            </Grid>
+        </Grid>
+        
+        <Grid BackgroundColor="#D18E69" Margin="0,36,0,0">
+            <Grid BackgroundColor="#eae5dc" HeightRequest="42" Margin="0,0.5,0,0.5"> 
+                <Image Source="set_weight.png" Margin="16,8" HorizontalOptions="Start"/>
+                <Label Text="Pobieraj nowe produkty" FontSize="16" Margin="60,0,0,0" VerticalOptions="Center" />
+                <Image Source="set_next.png" HorizontalOptions="End"/>
+            </Grid>
+        </Grid>
+        
+        <Grid VerticalOptions="CenterAndExpand"/>
         
         <Grid 
             BackgroundColor="#985321" 
