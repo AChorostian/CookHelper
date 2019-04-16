@@ -16,6 +16,11 @@ namespace CookHelper.Views
             InitializeComponent();
         }
 
+        void Setting_Tap(object sender, EventArgs e)
+        {
+            DisplayAlert("Tap", "Settings element", "ok");
+        }
+
         void TabBar_ProductsPage(object sender, EventArgs e)
         {
             App.Current.MainPage = new NavigationPage(new ProductsPage());

@@ -151,5 +151,6 @@
     <BundleResource Include="Resources\set_amount.png" />
     <BundleResource Include="Resources\set_volume.png" />
     <BundleResource Include="Resources\set_weight.png" />
+    <BundleResource Include="Resources\set_update.png" />
   </ItemGroup>
 </Project>
