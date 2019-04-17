@@ -35,11 +35,27 @@
             />
         </Grid>
     </NavigationPage.TitleView> 
-    <StackLayout BackgroundColor="#e5d3b3">
-        <Label 
-            Text="This is AddRecipePage : NavigationPage" 
-            HorizontalOptions="Center" 
-            VerticalOptions="CenterAndExpand"
-        />
+    <StackLayout BackgroundColor="#FFEFE8" Spacing="0">
+        
+        
+        <Grid BackgroundColor="#D18E69" Margin="0,36,0,0">
+            <Grid BackgroundColor="White" Margin="0,0.5,0,0.5">
+                <Editor Placeholder="Nazwa przepisu" Margin="12,2,0,2" MaxLength="25" VerticalOptions="Center"/>
+            </Grid>
+        </Grid>
+        
+        
+        <Grid BackgroundColor="#D18E69" Margin="0,36,0,0">
+            <Grid BackgroundColor="White" Margin="0,0.5,0,0.5">
+                <Grid HeightRequest="120" WidthRequest="120" BackgroundColor="Silver" 
+                      VerticalOptions="Start" HorizontalOptions="Center" Margin="8"/>
+            </Grid>
+        </Grid>
+        
+        <Grid BackgroundColor="#D18E69" Margin="0,36,0,0" >
+            <Grid BackgroundColor="White" Margin="0,0.5,0,0.5" >
+                <Editor Placeholder="Opis" Margin="12,2,0,2" MaxLength="25" VerticalOptions="Center" HeightRequest="280"/>
+            </Grid>
+        </Grid>
     </StackLayout>
 </ContentPage>
