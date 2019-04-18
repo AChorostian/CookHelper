@@ -10,15 +10,20 @@ namespace CookHelper.ViewModels
 {
     public class ProductsViewModel
     {
-        public ObservableCollection<Product> Items { get; set; }
+        public ObservableCollection<Product> ProductsCollection { get; set; }
 
         public ProductsViewModel()
         {
-            Items = new ObservableCollection<Product>();
-
-            Items.Add(new Product("nazwa1"));
-            Items.Add(new Product("nazwa2"));
-            Items.Add(new Product("nazwa3"));
+            ProductsCollection = new ObservableCollection<Product>
+            {
+                new Product { Name="Mleko" },
+                new Product { Name="Cukier" },
+                new Product { Name="Masło" },
+                new Product { Name="Mąka" },
+                new Product { Name="Jajko" },
+                new Product { Name="Sól" },
+                new Product { Name="Woda" },
+            };
         }
     }
 }

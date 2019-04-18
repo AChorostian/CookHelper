@@ -48,29 +48,30 @@
             </Grid>
         </Grid>
     </NavigationPage.TitleView> 
-    <StackLayout BackgroundColor="#e5d3b3" Spacing="0">
-<ListView x:Name="ItemsList" ItemsSource="{Binding Items}">
+    <Grid>
+        <StackLayout VerticalOptions="CenterAndExpand">
+        <ListView 
+            ItemsSource="{Binding ProductsCollection}" 
+            BackgroundColor="#FFEFE8" 
+            VerticalOptions="CenterAndExpand" 
+            >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <Grid>
-                            <Label Text="{Binding name}" 
-                                   LineBreakMode="NoWrap" 
-                                   HorizontalOptions="Start"
-                                   VerticalOptions="Center"
-                                   Margin="70,0,0,0"
-                                   Style="{DynamicResource ListItemTextStyle}" 
-                                   FontSize="17" />
-                            <Label Text="{Binding Description}" 
-                                   LineBreakMode="NoWrap" 
-                                   IsVisible="false"
-                                   Style="{DynamicResource ListItemDetailTextStyle}" 
-                                   FontSize="13" />
+                            <Label 
+                                Text="{Binding Name}"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Center"
+                                Margin="24,0,0,0"
+                                FontSize="17"
+                            />
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        </StackLayout>
         <Grid 
             BackgroundColor="#985321" 
             VerticalOptions="End"
@@ -84,6 +85,7 @@
                     Source="tab_products_active.png" 
                     HorizontalOptions="Center" 
                     VerticalOptions="Start"
+                    Margin="0,0,0,14"
                 />
                 <Label 
                     Text="Produkty" 
@@ -135,5 +137,5 @@
                 </Grid.GestureRecognizers>
             </Grid>
         </Grid>
-    </StackLayout>
+    </Grid>
 </ContentPage>

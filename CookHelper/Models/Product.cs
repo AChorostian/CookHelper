@@ -3,10 +3,14 @@ namespace CookHelper.Models
 {
     public class Product
     {
-        public String name;
-        public Product(String name)
-        {
-            this.name = name;
-        }
+        public string Name { get; set; }
+
+        public bool Weight { get; set; }
+        public bool Volume { get; set; }
+        public bool Amount { get; set; }
+
+        public double WeightValue { get; set; }
+        public double VolumeValue { get; set; }
+        public double AmountValue { get; set; }
     }
 }

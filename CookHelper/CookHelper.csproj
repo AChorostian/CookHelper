@@ -26,5 +26,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Views\CustomTabBar.xaml.cs" />
+    <Compile Remove="ViewModels\BaseViewModel.cs" />
   </ItemGroup>
 </Project>
