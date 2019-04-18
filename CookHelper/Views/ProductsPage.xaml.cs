@@ -1,19 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+using CookHelper.Views;
+using CookHelper.ViewModels;
 
 namespace CookHelper.Views
 {
-    [DesignTimeVisible(true)]
     public partial class ProductsPage : ContentPage
     {
+        ProductsViewModel viewModel;
+
         public ProductsPage()
         {
             InitializeComponent();
+            BindingContext = viewModel = new ProductsViewModel();
         }
 
         async void NavBar_DefaultBar(object sender, System.EventArgs e)
