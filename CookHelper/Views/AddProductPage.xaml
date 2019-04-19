@@ -38,7 +38,10 @@
     <StackLayout BackgroundColor="#FFEFE8" Spacing="0">
         <Grid BackgroundColor="#D18E69" Margin="0,36,0,0">
             <Grid BackgroundColor="White" Margin="0,0.5,0,0.5">
-                <Grid Margin="16,8,0,8" BackgroundColor="Silver" VerticalOptions="Start" HeightRequest="54" WidthRequest="54" HorizontalOptions="Start"/>
+                <Grid Margin="16,8,0,8" VerticalOptions="Start" 
+                      HeightRequest="54" WidthRequest="54" HorizontalOptions="Start">
+                    <Image Source="Settings/set_image.png"/>
+                </Grid>
                 <Editor Placeholder="Nazwa produktu" Margin="82,0,0,0" MaxLength="25" VerticalOptions="Center"/>
             </Grid>
         </Grid>

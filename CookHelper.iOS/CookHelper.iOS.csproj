@@ -140,6 +140,7 @@
     <Folder Include="Resources\NavigationBar\" />
     <Folder Include="Resources\TabBar\" />
     <Folder Include="Resources\Settings\" />
+    <Folder Include="Resources\Products\" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\NavigationBar\nav_add.png" />
@@ -155,5 +156,21 @@
     <BundleResource Include="Resources\Settings\set_update.png" />
     <BundleResource Include="Resources\Settings\set_volume.png" />
     <BundleResource Include="Resources\Settings\set_weight.png" />
+    <BundleResource Include="Resources\Products\apple.png" />
+    <BundleResource Include="Resources\Products\butter.png" />
+    <BundleResource Include="Resources\Products\cheese.png" />
+    <BundleResource Include="Resources\Products\egg.png" />
+    <BundleResource Include="Resources\Products\flour.png" />
+    <BundleResource Include="Resources\Products\garlic.png" />
+    <BundleResource Include="Resources\Products\milk.png" />
+    <BundleResource Include="Resources\Products\oil.png" />
+    <BundleResource Include="Resources\Products\onion.png" />
+    <BundleResource Include="Resources\Products\pasta1.png" />
+    <BundleResource Include="Resources\Products\pasta2.png" />
+    <BundleResource Include="Resources\Products\salt.png" />
+    <BundleResource Include="Resources\Products\sour_cream.png" />
+    <BundleResource Include="Resources\Products\sugar.png" />
+    <BundleResource Include="Resources\Products\water.png" />
+    <BundleResource Include="Resources\Settings\set_image.png" />
   </ItemGroup>
 </Project>
