@@ -38,29 +38,78 @@
     <StackLayout BackgroundColor="#FFEFE8" Spacing="0">
         <Grid BackgroundColor="#D18E69" Margin="0,36,0,0">
             <Grid BackgroundColor="White" Margin="0,0.5,0,0.5">
-                <Grid Margin="16,8,0,8" VerticalOptions="Start" 
-                      HeightRequest="54" WidthRequest="54" HorizontalOptions="Start">
-                    <Image x:Name="Pic" Source="Settings/set_image.png"/>
+                <Grid 
+                    Margin="16,8,0,8" 
+                    VerticalOptions="Start" 
+                    HeightRequest="54" 
+                    WidthRequest="54" 
+                    HorizontalOptions="Start"
+                    >
+                    <Image 
+                        x:Name="Pic" 
+                        Source="Settings/set_image.png"
+                    />
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer Tapped="Picture_Tap" />
                     </Grid.GestureRecognizers>
                 </Grid>
-                <Editor Placeholder="Nazwa produktu" Margin="82,0,0,0" MaxLength="25" VerticalOptions="Center"/>
+                <Editor 
+                    Placeholder="Nazwa produktu" 
+                    Margin="82,0,0,0" 
+                    MaxLength="25" 
+                    VerticalOptions="Center"
+                />
             </Grid>
         </Grid>
         
         <Grid BackgroundColor="#D18E69" Margin="0,36,0,0">
-            <StackLayout BackgroundColor="White" Margin="0,0.5,0,0.5" Spacing="0"> 
+            <StackLayout 
+                BackgroundColor="White" 
+                Margin="0,0.5,0,0.5" 
+                Spacing="0"
+                > 
                 
-                <Grid x:Name="first" HeightRequest="42" BackgroundColor="White">
+                <Grid 
+                    x:Name="first"
+                    HeightRequest="42" 
+                    BackgroundColor="White"
+                    >
                     <Grid HeightRequest="42" VerticalOptions="End">
-                        <Editor VerticalOptions="Center" Margin="55,0,0,0" Placeholder="Masa (g)"/>
+                        <Editor
+                            VerticalOptions="Center"
+                            Margin="55,0,0,0" 
+                            Placeholder="Masa (g)"
+                        />
                     </Grid>
-                    <Grid BackgroundColor="#D18E69" Margin="58,0,0,0" HeightRequest="0.5" VerticalOptions="Start" TranslationY="42"/>
-                    <Grid HeightRequest="42" VerticalOptions="Start" BackgroundColor="White">
-                        <Image Source="set_weight.png" Margin="16,8" HorizontalOptions="Start"/>
-                        <Label Text="Możliwe do zważenia" FontSize="17" Margin="60,0,0,0" VerticalOptions="Center" />
-                        <Switch HorizontalOptions="End" VerticalOptions="Center" Margin="16,0" Toggled="first_Toggled"/>
+                    <Grid 
+                        BackgroundColor="#D18E69" 
+                        Margin="58,0,0,0" 
+                        HeightRequest="0.5"
+                        VerticalOptions="Start" 
+                        TranslationY="42"
+                    />
+                    <Grid 
+                        HeightRequest="42" 
+                        VerticalOptions="Start" 
+                        BackgroundColor="White"
+                        >
+                        <Image 
+                            Source="set_weight.png" 
+                            Margin="16,8" 
+                            HorizontalOptions="Start"
+                        />
+                        <Label 
+                            Text="Możliwe do zważenia" 
+                            FontSize="17" 
+                            Margin="60,0,0,0" 
+                            VerticalOptions="Center" 
+                        />
+                        <Switch 
+                            HorizontalOptions="End" 
+                            VerticalOptions="Center" 
+                            Margin="16,0" 
+                            Toggled="first_Toggled"
+                        />
                     </Grid>
                 </Grid>
              
