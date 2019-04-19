@@ -59,11 +59,19 @@
                 <DataTemplate>
                     <ViewCell>
                         <Grid>
+                            <Grid 
+                                BackgroundColor="Silver" 
+                                HeightRequest="32" 
+                                WidthRequest="32"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Start"
+                                Margin="8,0,0,0"
+                            />   
                             <Label 
                                 Text="{Binding Name}"
                                 HorizontalOptions="Start"
                                 VerticalOptions="Center"
-                                Margin="24,0,0,0"
+                                Margin="52,0,0,0"
                                 FontSize="17"
                             />
                         </Grid>
