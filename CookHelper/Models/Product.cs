@@ -1,7 +1,7 @@
 ﻿using System;
 namespace CookHelper.Models
 {
-    public class Product
+    public class Product : IComparable<Product>
     {
         public string Name { get; set; }
 
@@ -12,5 +12,7 @@ namespace CookHelper.Models
         public double WeightValue { get; set; }
         public double VolumeValue { get; set; }
         public double AmountValue { get; set; }
+
+        public int CompareTo(Product other) => Name.CompareTo(other.Name);
     }
 }

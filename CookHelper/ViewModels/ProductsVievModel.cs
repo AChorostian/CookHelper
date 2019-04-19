@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.ObjectModel;
-
-using CookHelper.Views;
-using CookHelper.ViewModels;
+﻿using System.Collections.Generic;
 using CookHelper.Models;
-
 
 namespace CookHelper.ViewModels
 {
     public class ProductsViewModel
     {
-        public ObservableCollection<Product> ProductsCollection { get; set; }
+        public List<Product> ProductsCollection { get; set; }
 
         public ProductsViewModel()
         {
-            ProductsCollection = new ObservableCollection<Product>
+            ProductsCollection = new List<Product>
             {
                 new Product { Name="Mleko" },
                 new Product { Name="Cukier" },
@@ -24,6 +19,8 @@ namespace CookHelper.ViewModels
                 new Product { Name="Sól" },
                 new Product { Name="Woda" },
             };
+
+            ProductsCollection.Sort();
         }
     }
 }
