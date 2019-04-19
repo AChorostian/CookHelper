@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using Xamarin.Forms;
+using Plugin.Media;
 
 namespace CookHelper.Views
 {
@@ -67,6 +69,15 @@ namespace CookHelper.Views
                 var animation = new Animation(v => third.HeightRequest = v, big, small);
                 animation.Commit(this, "SimpleAnimation", 16, 300, Easing.CubicInOut, (v, c) => third.HeightRequest = small);
             }
+        }
+
+        async void Picture_Tap(object sender, EventArgs e)
+        {
+
+            await CrossMedia.Current.Initialize();
+
+            var selectedImageFile = await CrossMedia.Current.PickPhotoAsync();
+            Pic.Source = ImageSource.FromStream(() => selectedImageFile.GetStream());
         }
     }
 }
