@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace CookHelper.Models
 {
     public class Product : IComparable<Product>

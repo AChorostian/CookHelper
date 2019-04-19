@@ -32,14 +32,14 @@
                     TextColor="White" 
                 />
                 <Button 
-                    Image="nav_search.png" 
+                    Image="NavigationBar/nav_search.png" 
                     HorizontalOptions="End" 
                     WidthRequest="44" 
                     Margin="0,0,54,0"
                     Clicked="NavBar_SearchBar"
                 />
                 <Button 
-                    Image="nav_add.png" 
+                    Image="NavigationBar/nav_add.png" 
                     HorizontalOptions="End" 
                     WidthRequest="44" 
                     Margin="0,0,4,0"
@@ -90,7 +90,7 @@
                 <Image 
                     HeightRequest="28" 
                     WidthRequest="28" 
-                    Source="tab_products_active.png" 
+                    Source="TabBar/tab_products_active.png" 
                     HorizontalOptions="Center" 
                     VerticalOptions="Start"
                     Margin="0,0,0,14"
@@ -110,7 +110,7 @@
                 <Image 
                     HeightRequest="28" 
                     WidthRequest="28" 
-                    Source="tab_recipes.png" 
+                    Source="TabBar/tab_recipes.png" 
                     HorizontalOptions="Center" 
                     VerticalOptions="Start"
                 />
@@ -129,7 +129,7 @@
                 <Image 
                     HeightRequest="28"
                     WidthRequest="28" 
-                    Source="tab_settings.png" 
+                    Source="TabBar/tab_settings.png" 
                     HorizontalOptions="Center" 
                     VerticalOptions="Start"
                 />

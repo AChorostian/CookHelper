@@ -137,20 +137,23 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CustomRenderers\" />
+    <Folder Include="Resources\NavigationBar\" />
+    <Folder Include="Resources\TabBar\" />
+    <Folder Include="Resources\Settings\" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\nav_add.png" />
-    <BundleResource Include="Resources\nav_search.png" />
-    <BundleResource Include="Resources\tab_products.png" />
-    <BundleResource Include="Resources\tab_products_active.png" />
-    <BundleResource Include="Resources\tab_recipes.png" />
-    <BundleResource Include="Resources\tab_recipes_active.png" />
-    <BundleResource Include="Resources\tab_settings.png" />
-    <BundleResource Include="Resources\tab_settings_active.png" />
-    <BundleResource Include="Resources\set_next.png" />
-    <BundleResource Include="Resources\set_amount.png" />
-    <BundleResource Include="Resources\set_volume.png" />
-    <BundleResource Include="Resources\set_weight.png" />
-    <BundleResource Include="Resources\set_update.png" />
+    <BundleResource Include="Resources\NavigationBar\nav_add.png" />
+    <BundleResource Include="Resources\NavigationBar\nav_search.png" />
+    <BundleResource Include="Resources\TabBar\tab_products.png" />
+    <BundleResource Include="Resources\TabBar\tab_products_active.png" />
+    <BundleResource Include="Resources\TabBar\tab_recipes.png" />
+    <BundleResource Include="Resources\TabBar\tab_recipes_active.png" />
+    <BundleResource Include="Resources\TabBar\tab_settings.png" />
+    <BundleResource Include="Resources\TabBar\tab_settings_active.png" />
+    <BundleResource Include="Resources\Settings\set_amount.png" />
+    <BundleResource Include="Resources\Settings\set_next.png" />
+    <BundleResource Include="Resources\Settings\set_update.png" />
+    <BundleResource Include="Resources\Settings\set_volume.png" />
+    <BundleResource Include="Resources\Settings\set_weight.png" />
   </ItemGroup>
 </Project>
