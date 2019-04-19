@@ -5,15 +5,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using CookHelper.ViewModels;
 
 namespace CookHelper.Views
 {
     [DesignTimeVisible(true)]
     public partial class RecipesPage : ContentPage
     {
+        RecipesViewModel viewModel;
+
         public RecipesPage()
         {
             InitializeComponent();
+            BindingContext = viewModel = new RecipesViewModel();
         }
 
         async void NavBar_DefaultBar(object sender, System.EventArgs e)

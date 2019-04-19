@@ -49,13 +49,43 @@
             </Grid>
         </Grid>
     </NavigationPage.TitleView> 
-    <StackLayout BackgroundColor="#e5d3b3">
-        <Label 
-            Text="This is RecipesPage : NavigationPage" 
-            HorizontalOptions="Center" 
-            VerticalOptions="CenterAndExpand"
-        />
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <ListView 
+            Grid.Row="0"
+            ItemsSource="{Binding RecipesCollection}" 
+            BackgroundColor="#FFEFE8"
+            >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid 
+                                HeightRequest="32" 
+                                WidthRequest="32"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Start"
+                                Margin="16,0,0,0"
+                                >   
+                                <Image Source="{Binding Image}"/>
+                            </Grid>        
+                            <Label 
+                                Text="{Binding Name}"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Center"
+                                Margin="64,0,0,0"
+                                FontSize="17"
+                            />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
         <Grid 
+            Grid.Row="1"
             BackgroundColor="#985321" 
             VerticalOptions="End"
             HeightRequest="50" 
@@ -119,5 +149,5 @@
                 </Grid.GestureRecognizers>
             </Grid>
         </Grid>
-    </StackLayout>
+    </Grid>
 </ContentPage>

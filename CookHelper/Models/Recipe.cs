@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Collections.ObjectModel;
+using System.Collections.Generic;
 
 namespace CookHelper.Models
 {
-    public class Recipe
+    public class Recipe : IComparable<Recipe>
     {
         public string Name { get; set; }
         public string Image { get; set; }
@@ -11,6 +11,8 @@ namespace CookHelper.Models
         public string Description { get; set; }
         public double Multiplier { get; set; }
 
-        public ObservableCollection<Product> Products { get; set; }
+        public List<Product> Products { get; set; }
+
+        public int CompareTo(Recipe other) => Name.CompareTo(other.Name);
     }
 }
