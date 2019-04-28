@@ -21,6 +21,11 @@
     <Folder Include="Views\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Services\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Resources\TabBar\" />
+    <Folder Include="Resources\NavBar\" />
+    <Folder Include="Resources\Products\" />
+    <Folder Include="Resources\Settings\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="Views\CustomTabBar.xaml" />
@@ -28,5 +33,70 @@
   <ItemGroup>
     <Compile Remove="Views\CustomTabBar.xaml.cs" />
     <Compile Remove="ViewModels\BaseViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Resources\TabBar\tab_products_active.png" />
+    <None Remove="Resources\TabBar\tab_recipes.png" />
+    <None Remove="Resources\TabBar\tab_recipes_active.png" />
+    <None Remove="Resources\TabBar\tab_settings.png" />
+    <None Remove="Resources\TabBar\tab_settings_active.png" />
+    <None Remove="Resources\nav_add.png" />
+    <None Remove="Resources\TabBar\tab_products.png" />
+    <None Remove="Resources\NavBar\nav_add.png" />
+    <None Remove="Resources\NavBar\nav_search.png" />
+    <None Remove="Resources\Products\apple.png" />
+    <None Remove="Resources\Products\butter.png" />
+    <None Remove="Resources\Products\cheese.png" />
+    <None Remove="Resources\Products\egg.png" />
+    <None Remove="Resources\Products\flour.png" />
+    <None Remove="Resources\Products\garlic.png" />
+    <None Remove="Resources\Products\milk.png" />
+    <None Remove="Resources\Products\oil.png" />
+    <None Remove="Resources\Products\onion.png" />
+    <None Remove="Resources\Products\pasta1.png" />
+    <None Remove="Resources\Products\pasta2.png" />
+    <None Remove="Resources\Products\salt.png" />
+    <None Remove="Resources\Products\sour_cream.png" />
+    <None Remove="Resources\Products\sugar.png" />
+    <None Remove="Resources\Products\water.png" />
+    <None Remove="Resources\Settings\set_amount.png" />
+    <None Remove="Resources\Settings\set_image.png" />
+    <None Remove="Resources\Settings\set_next.png" />
+    <None Remove="Resources\Settings\set_update.png" />
+    <None Remove="Resources\Settings\set_volume.png" />
+    <None Remove="Resources\Settings\set_weight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\TabBar\tab_products_active.png" />
+    <EmbeddedResource Include="Resources\TabBar\tab_recipes.png" />
+    <EmbeddedResource Include="Resources\TabBar\tab_recipes_active.png" />
+    <EmbeddedResource Include="Resources\TabBar\tab_settings.png" />
+    <EmbeddedResource Include="Resources\TabBar\tab_settings_active.png" />
+    <EmbeddedResource Include="Resources\TabBar\tab_products.png" />
+    <EmbeddedResource Include="Resources\NavBar\nav_add.png" />
+    <EmbeddedResource Include="Resources\NavBar\nav_search.png" />
+    <EmbeddedResource Include="Resources\Settings\set_amount.png" />
+    <EmbeddedResource Include="Resources\Settings\set_image.png" />
+    <EmbeddedResource Include="Resources\Settings\set_next.png" />
+    <EmbeddedResource Include="Resources\Settings\set_update.png" />
+    <EmbeddedResource Include="Resources\Settings\set_volume.png" />
+    <EmbeddedResource Include="Resources\Settings\set_weight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Products\apple.png" />
+    <BundleResource Include="Resources\Products\butter.png" />
+    <BundleResource Include="Resources\Products\cheese.png" />
+    <BundleResource Include="Resources\Products\egg.png" />
+    <BundleResource Include="Resources\Products\flour.png" />
+    <BundleResource Include="Resources\Products\garlic.png" />
+    <BundleResource Include="Resources\Products\milk.png" />
+    <BundleResource Include="Resources\Products\oil.png" />
+    <BundleResource Include="Resources\Products\onion.png" />
+    <BundleResource Include="Resources\Products\pasta1.png" />
+    <BundleResource Include="Resources\Products\pasta2.png" />
+    <BundleResource Include="Resources\Products\salt.png" />
+    <BundleResource Include="Resources\Products\sour_cream.png" />
+    <BundleResource Include="Resources\Products\sugar.png" />
+    <BundleResource Include="Resources\Products\water.png" />
   </ItemGroup>
 </Project>

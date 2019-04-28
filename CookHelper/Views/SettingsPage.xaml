@@ -44,9 +44,9 @@
         <Grid BackgroundColor="#D18E69" Margin="0,36,0,0">
             <Grid BackgroundColor="White" HeightRequest="127" Margin="0,0.5,0,0.5"> 
                 <Grid HeightRequest="42" VerticalOptions="Start">
-                    <Image Source="Settings/set_weight.png" Margin="16,8" HorizontalOptions="Start"/>
+                    <Image Source="{controls:ImageResource CookHelper.Resources.Settings.set_weight.png}" Margin="16,8" HorizontalOptions="Start"/>
                     <Label Text="Jednostki wagi" FontSize="16" Margin="60,0,0,0" VerticalOptions="Center" />
-                    <Image Source="Settings/set_next.png" HorizontalOptions="End"/>
+                    <Image Source="{controls:ImageResource CookHelper.Resources.Settings.set_next.png}" HorizontalOptions="End"/>
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer Tapped="Setting_Tap" />
                     </Grid.GestureRecognizers>
@@ -55,9 +55,9 @@
                 <Grid BackgroundColor="#D18E69" Margin="58,42,0,0" HeightRequest="0.5" VerticalOptions="Start"/>
                 
                 <Grid HeightRequest="42" VerticalOptions="Start" Margin="0,42.5,0,0">
-                    <Image Source="Settings/set_volume.png" Margin="16,8" HorizontalOptions="Start"/>
+                    <Image Source="{controls:ImageResource CookHelper.Resources.Settings.set_volume.png}" Margin="16,8" HorizontalOptions="Start"/>
                     <Label Text="Jednostki objętości" FontSize="16" Margin="60,0,0,0" VerticalOptions="Center" />
-                    <Image Source="Settings/set_next.png" HorizontalOptions="End"/>
+                    <Image Source="{controls:ImageResource CookHelper.Resources.Settings.set_next.png}" HorizontalOptions="End"/>
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer Tapped="Setting_Tap" />
                     </Grid.GestureRecognizers>
@@ -66,9 +66,9 @@
                 <Grid BackgroundColor="#D18E69" Margin="58,84.5,0,0" HeightRequest="0.5" VerticalOptions="Start"/>
                 
                 <Grid HeightRequest="42" VerticalOptions="Start" Margin="0,85,0,0">
-                    <Image Source="Settings/set_amount.png" Margin="16,8" HorizontalOptions="Start"/>
+                    <Image Source="{controls:ImageResource CookHelper.Resources.Settings.set_amount.png}" Margin="16,8" HorizontalOptions="Start"/>
                     <Label Text="ilości sztuk" FontSize="16" Margin="60,0,0,0" VerticalOptions="Center" />
-                    <Image Source="Settings/set_next.png" HorizontalOptions="End"/>
+                    <Image Source="{controls:ImageResource CookHelper.Resources.Settings.set_next.png}" HorizontalOptions="End"/>
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer Tapped="Setting_Tap" />
                     </Grid.GestureRecognizers>
@@ -79,7 +79,7 @@
         
         <Grid BackgroundColor="#D18E69" Margin="0,36,0,0">
             <Grid BackgroundColor="white" HeightRequest="42" Margin="0,0.5,0,0.5"> 
-                <Image Source="Settings/set_update.png" Margin="16,8" HorizontalOptions="Start"/>
+                <Image Source="{controls:ImageResource CookHelper.Resources.Settings.set_update.png}" Margin="16,8" HorizontalOptions="Start"/>
                 <Label Text="Pobieraj nowe produkty" FontSize="16" Margin="60,0,0,0" VerticalOptions="Center" />
                 <Switch HorizontalOptions="End" VerticalOptions="Center" Margin="16,0"/>
             </Grid>
@@ -97,7 +97,7 @@
                 <Image 
                     HeightRequest="28" 
                     WidthRequest="28" 
-                    Source="TabBar/tab_products.png" 
+                    Source="{controls:ImageResource CookHelper.Resources.TabBar.tab_products.png}"
                     HorizontalOptions="Center" 
                     VerticalOptions="Start"
                 />
@@ -116,7 +116,7 @@
                 <Image 
                     HeightRequest="28" 
                     WidthRequest="28" 
-                    Source="TabBar/tab_recipes.png" 
+                    Source="{controls:ImageResource CookHelper.Resources.TabBar.tab_recipes.png}"
                     HorizontalOptions="Center" 
                     VerticalOptions="Start"
                 />
@@ -135,7 +135,7 @@
                 <Image 
                     HeightRequest="28"
                     WidthRequest="28" 
-                    Source="TabBar/tab_settings_active.png" 
+                    Source="{controls:ImageResource CookHelper.Resources.TabBar.tab_settings_active.png}"
                     HorizontalOptions="Center" 
                     VerticalOptions="Start"
                 />

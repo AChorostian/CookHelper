@@ -32,20 +32,26 @@
                     FontAttributes="Bold" 
                     TextColor="White" 
                 />
-                <Button 
-                    Image="NavigationBar/nav_search.png" 
-                    HorizontalOptions="End" 
+                <Grid
+                    HorizontalOptions="End"
                     WidthRequest="44" 
                     Margin="0,0,54,0"
-                    Clicked="NavBar_SearchBar"
-                />
-                <Button 
-                    Image="NavigationBar/nav_add.png" 
-                    HorizontalOptions="End" 
+                    >
+                    <Image Source="{controls:ImageResource CookHelper.Resources.NavBar.nav_search.png}" />
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="NavBar_SearchBar" />
+                    </Grid.GestureRecognizers>
+                </Grid>
+                <Grid
+                    HorizontalOptions="End"
                     WidthRequest="44" 
                     Margin="0,0,4,0"
-                    Clicked="NavBar_AddRecipe"
-                />
+                    >
+                    <Image Source="{controls:ImageResource CookHelper.Resources.NavBar.nav_add.png}" />
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="NavBar_AddRecipe" />
+                    </Grid.GestureRecognizers>
+                </Grid>
             </Grid>
         </Grid>
     </NavigationPage.TitleView> 
@@ -95,7 +101,7 @@
                 <Image 
                     HeightRequest="28" 
                     WidthRequest="28" 
-                    Source="TabBar/tab_products.png" 
+                    Source="{controls:ImageResource CookHelper.Resources.TabBar.tab_products.png}"
                     HorizontalOptions="Center" 
                     VerticalOptions="Start"
                 />
@@ -114,7 +120,7 @@
                 <Image 
                     HeightRequest="28" 
                     WidthRequest="28" 
-                    Source="TabBar/tab_recipes_active.png" 
+                    Source="{controls:ImageResource CookHelper.Resources.TabBar.tab_recipes_active.png}"
                     HorizontalOptions="Center" 
                     VerticalOptions="Start"
                 />
@@ -133,7 +139,7 @@
                 <Image 
                     HeightRequest="28"
                     WidthRequest="28" 
-                    Source="TabBar/tab_settings.png" 
+                    Source="{controls:ImageResource CookHelper.Resources.TabBar.tab_settings.png}"
                     HorizontalOptions="Center" 
                     VerticalOptions="Start"
                 />
