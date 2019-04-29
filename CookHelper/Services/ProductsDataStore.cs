@@ -1,15 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using CookHelper.Models;
 
-namespace CookHelper.ViewModels
+namespace CookHelper.Services
 {
-    public class ProductsViewModel
+    public class ProductsDataStore : IDataStore<Product>
     {
-        public List<Product> ProductsCollection { get; set; }
+        public List<Product> products { get; set; }
 
-        public ProductsViewModel()
+        public ProductsDataStore()
         {
-            ProductsCollection = new List<Product>
+            products = new List<Product>
             {
                 new Product { Name="Mleko" , Image="Products/milk.png" },
                 new Product { Name="Cukier" , Image="Products/sugar.png" },
@@ -27,8 +30,37 @@ namespace CookHelper.ViewModels
                 new Product { Name="Makaron kokardki" , Image="Products/pasta1.png"},
                 new Product { Name="Makaron Spaghetti" , Image="Products/pasta2.png"},
             };
-
-            ProductsCollection.Sort();
+            products.Sort();
         }
+
+        public void AddItem(Product item)
+        {
+            products.Add(item);
+        }
+
+        public void UpdateItem(Product item)
+        {
+            var oldItem = products.Where((Product arg) => arg.Id == item.Id).FirstOrDefault();
+            products.Remove(oldItem);
+            products.Add(item);
+        }
+
+        public void DeleteItem(int id)
+        {
+            var oldItem = products.Where((Product arg) => arg.Id == id).FirstOrDefault();
+            products.Remove(oldItem);
+        }
+
+        public Product GetItem(int id)
+        {
+            return products.FirstOrDefault(s => s.Id == id);
+        }
+
+        public List<Product> GetItems()
+        {
+            return products;
+        }
+
+
     }
 }

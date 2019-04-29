@@ -7,15 +7,19 @@ using System.Threading.Tasks;
 using System.IO;
 using Xamarin.Forms;
 using Plugin.Media;
+using CookHelper.ViewModels;
 
 namespace CookHelper.Views
 {
     [DesignTimeVisible(true)]
     public partial class AddProductPage : ContentPage
     {
+        AddProductViewModel viewModel;
+
         public AddProductPage()
         {
             InitializeComponent();
+            BindingContext = viewModel = new AddProductViewModel();
         }
 
         void NavBar_Cancel(object sender, EventArgs e)

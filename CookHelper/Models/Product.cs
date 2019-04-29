@@ -5,6 +5,8 @@ namespace CookHelper.Models
 {
     public class Product : IComparable<Product>
     {
+        public int Id { get; set; }
+
         public string Name { get; set; }
         public string Image { get; set; }
 

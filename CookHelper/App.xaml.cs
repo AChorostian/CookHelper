@@ -2,15 +2,18 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using CookHelper.Views;
+using CookHelper.Services;
 
 namespace CookHelper
 {
     public partial class App : Application
     {
+        public static ProductsDataStore productsDataStore;
+
         public App()
         {
             InitializeComponent();
-
+            productsDataStore = new ProductsDataStore();
             MainPage = new NavigationPage(new ProductsPage());
         }
 
