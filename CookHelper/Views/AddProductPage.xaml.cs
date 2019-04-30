@@ -27,6 +27,14 @@ namespace CookHelper.Views
             Navigation.PopModalAsync();
         }
 
+        async void NavBar_Submit(object sender, EventArgs e)
+        {
+            await DisplayAlert(viewModel.NewProduct.Name, viewModel.NewProduct.Name, "ok");
+            viewModel.SaveProduct();
+            await Navigation.PopModalAsync();
+            App.Current.MainPage = new NavigationPage(new ProductsPage());
+        }
+
         void first_Toggled(object sender, ToggledEventArgs e)
         {
             double small = 42;
@@ -73,15 +81,6 @@ namespace CookHelper.Views
                 var animation = new Animation(v => third.HeightRequest = v, big, small);
                 animation.Commit(this, "SimpleAnimation", 16, 300, Easing.CubicInOut, (v, c) => third.HeightRequest = small);
             }
-        }
-
-        async void Picture_Tap(object sender, EventArgs e)
-        {
-
-            await CrossMedia.Current.Initialize();
-
-            var selectedImageFile = await CrossMedia.Current.PickPhotoAsync();
-            Pic.Source = ImageSource.FromStream(() => selectedImageFile.GetStream());
         }
     }
 }

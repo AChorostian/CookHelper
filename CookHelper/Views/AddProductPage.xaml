@@ -31,34 +31,20 @@
                 HorizontalOptions="End" 
                 Margin="8,0,8,0" 
                 FontAttributes="Bold" 
-                Clicked="NavBar_Cancel"
+                Clicked="NavBar_Submit"
             />
         </Grid>
     </NavigationPage.TitleView> 
     <StackLayout BackgroundColor="#FFEFE8" Spacing="0">
         <Grid BackgroundColor="#D18E69" Margin="0,36,0,0">
-            <Grid BackgroundColor="White" Margin="0,0.5,0,0.5">
-                <Grid 
-                    Margin="16,8,0,8" 
-                    VerticalOptions="Start" 
-                    HeightRequest="54" 
-                    WidthRequest="54" 
-                    HorizontalOptions="Start"
-                    >
-                    <Image 
-                        x:Name="Pic" 
-                        Source="Settings/set_image.png"
-                    />
-                    <Grid.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Picture_Tap" />
-                    </Grid.GestureRecognizers>
-                </Grid>
+            <Grid BackgroundColor="White" Margin="0,0.5,0,0.5" HeightRequest="42">
                 <Editor
                     Placeholder="Nazwa produktu" 
-                    Margin="82,0,0,0" 
+                    Margin="56,0,0,0" 
+                    
                     MaxLength="25" 
                     VerticalOptions="Center"
-                    Text="{Binding product.Name}"
+                    Text="{Binding NewProduct.Name}"
                 />
             </Grid>
         </Grid>
@@ -93,7 +79,7 @@
                         BackgroundColor="White"
                         >
                         <Image 
-                            Source="Settings/set_weight.png" 
+                            Source="{controls:ImageResource CookHelper.Resources.Settings.set_weight.png}"
                             Margin="16,8" 
                             HorizontalOptions="Start"
                         />
@@ -141,7 +127,7 @@
                         BackgroundColor="White"
                         >
                         <Image 
-                            Source="Settings/set_volume.png" 
+                            Source="{controls:ImageResource CookHelper.Resources.Settings.set_volume.png}"
                             Margin="16,8" 
                             HorizontalOptions="Start"/>
                         <Label 
@@ -188,7 +174,7 @@
                         BackgroundColor="White"
                         >
                         <Image 
-                            Source="Settings/set_amount.png"
+                            Source="{controls:ImageResource CookHelper.Resources.Settings.set_amount.png}"
                             Margin="16,8" 
                             HorizontalOptions="Start"
                         />

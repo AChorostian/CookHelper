@@ -13,8 +13,6 @@ namespace CookHelper.ViewModels
 
         public ProductsViewModel()
         {
-            //public IDataStore<Product> DataStore => DependencyService.Get<IDataStore<Product>>() ?? new ProductsDataStore();
-
             ProductsCollection = App.productsDataStore.GetItems();
         }
     }

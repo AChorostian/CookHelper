@@ -92,21 +92,12 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid>
-                            <Grid 
-                                HeightRequest="32" 
-                                WidthRequest="32"
-                                VerticalOptions="Center"
-                                HorizontalOptions="Start"
-                                Margin="16,0,0,0"
-                                >   
-                                <Image Source="{Binding Image}"/>
-                            </Grid>        
+                        <Grid>      
                             <Label 
                                 Text="{Binding Name}"
                                 HorizontalOptions="Start"
                                 VerticalOptions="Center"
-                                Margin="64,0,0,0"
+                                Margin="24,0,0,0"
                                 FontSize="17"
                             />
                         </Grid>
