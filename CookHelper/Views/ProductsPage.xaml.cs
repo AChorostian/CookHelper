@@ -9,6 +9,7 @@ using Xamarin.Forms.Xaml;
 
 using CookHelper.Views;
 using CookHelper.ViewModels;
+using CookHelper.Models;
 
 namespace CookHelper.Views
 {
@@ -20,6 +21,8 @@ namespace CookHelper.Views
         {
             InitializeComponent();
             BindingContext = viewModel = new ProductsViewModel();
+
+            NavigationPage.SetBackButtonTitle(this, "Produkty");
         }
 
         async void NavBar_DefaultBar(object sender, System.EventArgs e)
@@ -43,6 +46,16 @@ namespace CookHelper.Views
         void NavBar_AddProduct(object sender, System.EventArgs e)
         {
             Navigation.PushModalAsync( new NavigationPage( new AddProductPage() ));
+        }
+
+        async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
+        {
+            if (!(args.SelectedItem is Product item))
+                return;
+
+            await Navigation.PushAsync(new ProductDetailsPage(item));
+
+            ProductsLV.SelectedItem = null;
         }
 
         void TabBar_ProductsPage(object sender, EventArgs e)

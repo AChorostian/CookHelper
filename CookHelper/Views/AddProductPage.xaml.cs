@@ -29,7 +29,6 @@ namespace CookHelper.Views
 
         async void NavBar_Submit(object sender, EventArgs e)
         {
-            await DisplayAlert(viewModel.NewProduct.Name, viewModel.NewProduct.Name, "ok");
             viewModel.SaveProduct();
             await Navigation.PopModalAsync();
             App.Current.MainPage = new NavigationPage(new ProductsPage());
@@ -37,6 +36,7 @@ namespace CookHelper.Views
 
         void first_Toggled(object sender, ToggledEventArgs e)
         {
+            viewModel.NewProduct.Weight = e.Value;
             double small = 42;
             double big = 84.5;
             if (e.Value)
@@ -53,6 +53,7 @@ namespace CookHelper.Views
 
         void second_Toggled(object sender, ToggledEventArgs e)
         {
+            viewModel.NewProduct.Volume = e.Value;
             double small = 42;
             double big = 84.5;
             if (e.Value)
@@ -69,6 +70,7 @@ namespace CookHelper.Views
 
         void third_Toggled(object sender, ToggledEventArgs e)
         {
+            viewModel.NewProduct.Amount = e.Value;
             double small = 42;
             double big = 84.5;
             if (e.Value)

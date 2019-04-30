@@ -85,9 +85,11 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <ListView 
+            x:Name="ProductsLV"
             Grid.Row="0"
             ItemsSource="{Binding ProductsCollection}" 
             BackgroundColor="#FFEFE8"
+            ItemSelected="OnItemSelected">
             >
             <ListView.ItemTemplate>
                 <DataTemplate>

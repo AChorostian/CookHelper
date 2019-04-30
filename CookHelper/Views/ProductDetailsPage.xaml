@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:views="clr-namespace:CookHelper.Views" 
+    x:Class="CookHelper.Views.ProductDetailsPage"
+    xmlns:controls="clr-namespace:CookHelper.Controls;assembly=CookHelper"
+    >
+    <NavigationPage.TitleView> 
+        
+    </NavigationPage.TitleView> 
+    <StackLayout BackgroundColor="#FFEFE8" Spacing="0">
+        <Grid Margin="20,20">
+            <Label Text="{Binding Name}" FontSize="30" />
+        </Grid>
+        
+        <StackLayout Margin="20,20">
+            <Entry Placeholder="Wartość" Keyboard="Numeric"/>
+            <Picker x:Name="picker1"
+        Title="Wybierz jednostkę"
+        TitleColor="Silver">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>gramy</x:String>
+                    <x:String>sztuki</x:String>
+                    <x:String>litry</x:String>
+                    <x:String>mililitry</x:String>
+                    <x:String>szklanki</x:String>
+                    <x:String>łyżeczki</x:String>
+                    <x:String>kilogramy</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        </StackLayout>
+        
+        <Grid Margin="20,0">
+            <Label Text="=" FontSize="40" HorizontalOptions="Center"/>
+        </Grid>
+        
+        <StackLayout Margin="20,20">
+            <Entry Placeholder="Wartość" Keyboard="Numeric"/>
+            <Picker x:Name="picker2"
+        Title="Wybierz jednostkę"
+        TitleColor="Silver">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>gramy</x:String>
+                    <x:String>sztuki</x:String>
+                    <x:String>litry</x:String>
+                    <x:String>mililitry</x:String>
+                    <x:String>szklanki</x:String>
+                    <x:String>łyżeczki</x:String>
+                    <x:String>kilogramy</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        </StackLayout>
+
+
+        
+    </StackLayout>
+</ContentPage>

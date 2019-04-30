@@ -41,7 +41,6 @@
                 <Editor
                     Placeholder="Nazwa produktu" 
                     Margin="56,0,0,0" 
-                    
                     MaxLength="25" 
                     VerticalOptions="Center"
                     Text="{Binding NewProduct.Name}"
@@ -64,6 +63,8 @@
                             VerticalOptions="Center"
                             Margin="55,0,0,0" 
                             Placeholder="Masa (g)"
+                            Text="{Binding StrWeightValue}"
+                            Keyboard="Numeric"
                         />
                     </Grid>
                     <Grid 
@@ -112,6 +113,8 @@
                             VerticalOptions="Center" 
                             Margin="55,0,0,0" 
                             Placeholder="Objętość (ml)"
+                            Text="{Binding StrVolumeValue}"
+                            Keyboard="Numeric"
                         />
                     </Grid>
                     <Grid 
@@ -159,6 +162,8 @@
                             VerticalOptions="Center" 
                             Margin="55,0,0,0" 
                             Placeholder="Ilość sztuk"
+                            Text="{Binding StrAmountValue}"
+                            Keyboard="Numeric"
                         />
                     </Grid>
                     <Grid

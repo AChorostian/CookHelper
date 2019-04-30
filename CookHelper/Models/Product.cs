@@ -1,38 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 
 namespace CookHelper.Models
 {
-    public class Product : IComparable<Product> , INotifyPropertyChanged
+    public class Product : IComparable<Product>
     {
         public int Id;
-        public string name;
-
-        public string Name
-        {
-            get { return name; }
-            set 
-            { 
-                name = value;
-                OnPropertyChanged("Name");
-            }
-        }
-        //    {
-        //        //Name = value;
-        //        //OnPropertyChanged("Name");
-        //    }
-        //}
-
-        //public string Image
-        //{ 
-        //    get { return Image; } 
-        //    set
-        //    { 
-        //        Image = value; 
-        //        OnPropertyChanged("Image");
-        //    } 
-        //}
+        public string Name { get; set; }
 
         public bool Weight { get; set; }
         public bool Volume { get; set; }
@@ -42,16 +15,14 @@ namespace CookHelper.Models
         public double VolumeValue { get; set; }
         public double AmountValue { get; set; }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-
         public int CompareTo(Product other) => Name.CompareTo(other.Name);
 
-        protected void OnPropertyChanged(string propertyName)
+        public Product()
         {
-            if (PropertyChanged == null)
-                return;
-            PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            Weight = false;
+            Volume = false;
+            Amount = false;
         }
     }
 }
+

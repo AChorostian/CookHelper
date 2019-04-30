@@ -14,21 +14,23 @@ namespace CookHelper.Services
         {
             Products = new List<Product>
             {
-                new Product { Name="Mleko" },
-                new Product { Name="Cukier" },
-                new Product { Name="Masło" },
-                new Product { Name="Mąka" },
-                new Product { Name="Jajko" },
-                new Product { Name="Sól" },
-                new Product { Name="Woda" },
-                new Product { Name="Śmietana" },
-                new Product { Name="Jabłko" },
-                new Product { Name="Ser" },
-                new Product { Name="Czosnek" },
-                new Product { Name="Olej" },
-                new Product { Name="Cebula" },
-                new Product { Name="Makaron kokardki" },
-                new Product { Name="Makaron Spaghetti" },
+                new Product { Name="Mleko" , Weight=true , Volume=true , Amount=true , WeightValue=1000 , VolumeValue=1000 , AmountValue=1 },
+                new Product { Name="Cukier" , Weight=true , Volume=true , Amount=true , WeightValue=1000 , VolumeValue=1250 , AmountValue=1 },
+                new Product { Name="Masło" , Weight=true , Volume=true , WeightValue=240 , VolumeValue=250 },
+                new Product { Name="Mąka" , Weight=true , Volume=true , WeightValue=170 , VolumeValue=250 },
+                new Product { Name="Jajko" , Amount=true , AmountValue=1 },
+                new Product { Name="Sól" , Weight=true , Volume=true , WeightValue=300 , VolumeValue=250 },
+                new Product { Name="Woda" , Weight=true , Volume=true , WeightValue=250 , VolumeValue=250 },
+                new Product { Name="Śmietana" , Weight=true , Volume=true , WeightValue=220 , VolumeValue=250 },
+                new Product { Name="Jabłko" , Weight=true , Amount=true , WeightValue=180 , AmountValue=1 },
+                new Product { Name="Ser" , Weight=true , WeightValue=100 },
+                new Product { Name="Czosnek" , Weight=true , Amount=true , WeightValue=45 , AmountValue=1 },
+                new Product { Name="Olej rzepakowy" , Weight=true , Volume=true , WeightValue=215 , VolumeValue=250 },
+                new Product { Name="Cebula" , Weight=true , Amount=true , WeightValue=105 , AmountValue=1 },
+                new Product { Name="Makaron kokardki" , Weight=true , Volume=true , WeightValue=75 , VolumeValue=250 },
+                new Product { Name="Makaron Spaghetti" , Weight=true , WeightValue=100 },
+                new Product { Name="Bułka tarta" , Weight=true , Volume=true , WeightValue=150 , VolumeValue=250 },
+                new Product { Name="Miód" , Weight=true , Volume=true , WeightValue=360 , VolumeValue=250 }
             };
             Products.Sort();
         }
