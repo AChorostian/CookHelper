@@ -16,12 +16,12 @@ namespace CookHelper.Views
     [DesignTimeVisible(true)]
     public partial class ProductDetailsPage : ContentPage
     {
-        //AddProductViewModel viewModel;
+        ProductDetailsViewModel viewModel;
 
         public ProductDetailsPage(Product product)
         {
             InitializeComponent();
-            BindingContext =  product;
+            BindingContext = viewModel = new ProductDetailsViewModel(product);
         }
 
     }
