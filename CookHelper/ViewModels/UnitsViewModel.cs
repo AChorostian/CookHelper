@@ -9,11 +9,15 @@ namespace CookHelper.ViewModels
 {
     public class UnitsViewModel
     {
-        //public List<Product> ProductsCollection { get; set; }
+        public IEnumerable<Unit> UnitsCollection { get; set; }
         public string Title { get; set; }
+
+        public UnitBase unitBase;
 
         public UnitsViewModel(UnitBase unitBase)
         {
+            this.unitBase = unitBase;
+
             switch (unitBase)
             {
                 case UnitBase.Weight:
@@ -29,7 +33,14 @@ namespace CookHelper.ViewModels
                     break;
             }
 
-            //ProductsCollection = App.productsDataStore.GetItems();
+            UnitsCollection = App.unitsDataStore.GetItems(unitBase);
+        }
+
+        public void newUnit()
+        {
+            Unit unit = new Unit { Name="Nowa jednostka" , Value=1 , Base = unitBase };
+            App.unitsDataStore.AddItem(unit);
+            UnitsCollection = App.unitsDataStore.GetItems(unitBase);
         }
     }
 }

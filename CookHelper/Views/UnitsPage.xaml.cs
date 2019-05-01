@@ -23,5 +23,20 @@ namespace CookHelper.Views
             InitializeComponent();
             BindingContext = viewModel = new UnitsViewModel(unitBase);
         }
+
+        void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
+        {
+            UnitsLV.SelectedItem = null;
+        }
+
+        void AddUnit(object sender, System.EventArgs e)
+        {
+            viewModel.newUnit();
+            UnitsLV.ItemsSource = viewModel.UnitsCollection;
+        }
+
+
+
+
     }
 }

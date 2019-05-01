@@ -9,11 +9,13 @@ namespace CookHelper
     public partial class App : Application
     {
         public static ProductsDataStore productsDataStore;
+        public static UnitsDataStore unitsDataStore;
 
         public App()
         {
             InitializeComponent();
             productsDataStore = new ProductsDataStore();
+            unitsDataStore = new UnitsDataStore();
             MainPage = new NavigationPage(new ProductsPage());
         }
 

@@ -15,6 +15,7 @@ namespace CookHelper.Services
             Units = new List<Unit>
             {
                 new Unit { Name="gram" , Base=UnitBase.Weight , Value=1 },
+                new Unit { Name="dekagram" , Base=UnitBase.Weight , Value=10 },
                 new Unit { Name="kilogram" , Base=UnitBase.Weight , Value=1000 },
 
                 new Unit { Name="mililitr" , Base=UnitBase.Volume , Value=1 },
@@ -24,8 +25,7 @@ namespace CookHelper.Services
                 new Unit { Name="łyżeczka" , Base=UnitBase.Volume , Value=5 },
 
                 new Unit { Name="sztuka" , Base=UnitBase.Amount , Value=1 },
-                new Unit { Name="tuzin" , Base=UnitBase.Amount , Value=12 },
-                new Unit { Name="kopa" , Base=UnitBase.Amount , Value=60 }
+                new Unit { Name="tuzin" , Base=UnitBase.Amount , Value=12 }
             };
             Units.Sort();
         }
@@ -59,10 +59,10 @@ namespace CookHelper.Services
             return Units;
         }
 
-        public List<Unit> GetItems(UnitBase unitBase)
+        public IEnumerable<Unit> GetItems(UnitBase unitBase)
         {
             Units.Sort();
-            return (List<Unit>)Units.Where(u => u.Base == unitBase);
+            return Units.Where(u => u.Base == unitBase);
         }
 
     }
