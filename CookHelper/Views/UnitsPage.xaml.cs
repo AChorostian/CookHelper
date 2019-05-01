@@ -35,8 +35,9 @@ namespace CookHelper.Views
             UnitsLV.ItemsSource = viewModel.UnitsCollection;
         }
 
-
-
-
+        async void DeleteUnit(object sender, EventArgs e)
+        {
+            await DisplayAlert("Uwaga", "Czy na pewno chcesz usunąć tą jednostkę", "tak" , "nie" );
+        }
     }
 }

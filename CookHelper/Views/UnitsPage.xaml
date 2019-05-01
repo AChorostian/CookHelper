@@ -11,23 +11,22 @@
     </NavigationPage.TitleView> 
     <StackLayout BackgroundColor="#FFEFE8" Spacing="0">
         <Grid Margin="20,0" HeightRequest="110">
-            <Label Text="{Binding Title}" FontSize="30" VerticalOptions="Center"/>
-            
+            <Label 
+                Text="{Binding Title}" 
+                FontSize="30"
+                VerticalOptions="Center"
+            />
             <Button 
                 Text="+" 
                 TextColor="Black" 
                 FontSize="50" 
-                HorizontalOptions="End" 
-                Margin="12,0" 
+                HorizontalOptions="End"
                 HeightRequest="50" 
                 WidthRequest="50" 
-                BackgroundColor="Red"
                 VerticalOptions="Center"
                 Clicked="AddUnit"
             />
-
         </Grid>
-        
         <Grid BackgroundColor="#D18E69" Margin="0,0,0,0">
             <Grid 
                 BackgroundColor="White" 
@@ -48,10 +47,13 @@
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="4*"/>
                                         <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="0.4*"/>
                                     </Grid.ColumnDefinitions>
                                     <Entry Text="{Binding Name}" Margin="10,3,0,3" Grid.Column="0" Placeholder="Nazwa"/>        
                                     <Entry Text="{Binding Value}" Margin="0,3,10,3" Grid.Column="1" />  
                                     <Label Text="g" Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,20,0" TextColor="Gray"/>
+                                    <Button Text="❌" Grid.Column="2" Margin="-10,0,6,0" FontSize="12" Clicked="DeleteUnit"/>
+                                       
                                 </Grid>
                             </ViewCell>
                         </DataTemplate>
