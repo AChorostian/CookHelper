@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using CookHelper.Models;
 
 namespace CookHelper.Views
 {
@@ -14,11 +15,27 @@ namespace CookHelper.Views
         public SettingsPage()
         {
             InitializeComponent();
+            NavigationPage.SetBackButtonTitle(this, "Ustawienia");
         }
 
         void Setting_Tap(object sender, EventArgs e)
         {
             DisplayAlert("Tap", "Settings element", "ok");
+        }
+
+        void Units1_Tap(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new UnitsPage(UnitBase.Weight));
+        }
+
+        void Units2_Tap(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new UnitsPage(UnitBase.Volume));
+        }
+
+        void Units3_Tap(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new UnitsPage(UnitBase.Amount));
         }
 
         void TabBar_ProductsPage(object sender, EventArgs e)

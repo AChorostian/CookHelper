@@ -48,7 +48,7 @@
                     <Label Text="Jednostki wagi" FontSize="16" Margin="60,0,0,0" VerticalOptions="Center" />
                     <Image Source="{controls:ImageResource CookHelper.Resources.Settings.set_next.png}" HorizontalOptions="End"/>
                     <Grid.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Setting_Tap" />
+                        <TapGestureRecognizer Tapped="Units1_Tap" />
                     </Grid.GestureRecognizers>
                 </Grid>
              
@@ -59,7 +59,7 @@
                     <Label Text="Jednostki objętości" FontSize="16" Margin="60,0,0,0" VerticalOptions="Center" />
                     <Image Source="{controls:ImageResource CookHelper.Resources.Settings.set_next.png}" HorizontalOptions="End"/>
                     <Grid.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Setting_Tap" />
+                        <TapGestureRecognizer Tapped="Units2_Tap" />
                     </Grid.GestureRecognizers>
                 </Grid>
                 
@@ -70,7 +70,7 @@
                     <Label Text="ilości sztuk" FontSize="16" Margin="60,0,0,0" VerticalOptions="Center" />
                     <Image Source="{controls:ImageResource CookHelper.Resources.Settings.set_next.png}" HorizontalOptions="End"/>
                     <Grid.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Setting_Tap" />
+                        <TapGestureRecognizer Tapped="Units3_Tap" />
                     </Grid.GestureRecognizers>
                 </Grid>
                 

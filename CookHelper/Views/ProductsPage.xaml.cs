@@ -21,7 +21,6 @@ namespace CookHelper.Views
         {
             InitializeComponent();
             BindingContext = viewModel = new ProductsViewModel();
-
             NavigationPage.SetBackButtonTitle(this, "Produkty");
         }
 
