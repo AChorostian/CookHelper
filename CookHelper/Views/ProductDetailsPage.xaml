@@ -5,58 +5,60 @@
     xmlns:views="clr-namespace:CookHelper.Views" 
     x:Class="CookHelper.Views.ProductDetailsPage"
     xmlns:controls="clr-namespace:CookHelper.Controls;assembly=CookHelper"
+    BackgroundColor="#FFEFE8"
     >
     <NavigationPage.TitleView> 
-        
+        <Grid>
+        <Button Text="Usuń" TextColor="White" HorizontalOptions="End" Margin="0,0,82,0"/>
+        <Button Text="Edytuj" TextColor="White" HorizontalOptions="End" Margin="0,0,12,0"/>
+        </Grid>
     </NavigationPage.TitleView> 
-    <StackLayout BackgroundColor="#FFEFE8" Spacing="0">
-        <Grid Margin="20,20">
-            <Label Text="{Binding SelectedProduct.Name}" FontSize="30" />
-        </Grid>
-        
-        <StackLayout Margin="20,20">
-            <Entry Placeholder="Wartość" Keyboard="Numeric"/>
-            <Picker x:Name="picker1"
-        Title="Wybierz jednostkę"
-        TitleColor="Silver">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>gramy</x:String>
-                    <x:String>sztuki</x:String>
-                    <x:String>litry</x:String>
-                    <x:String>mililitry</x:String>
-                    <x:String>szklanki</x:String>
-                    <x:String>łyżeczki</x:String>
-                    <x:String>kilogramy</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-        </StackLayout>
-        
-        <Grid Margin="20,0">
-            <Label Text="=" FontSize="40" HorizontalOptions="Center"/>
-        </Grid>
-        
-        <StackLayout Margin="20,20">
-            <Entry Placeholder="Wartość" Keyboard="Numeric"/>
-            <Picker x:Name="picker2"
-        Title="Wybierz jednostkę"
-        TitleColor="Silver">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>gramy</x:String>
-                    <x:String>sztuki</x:String>
-                    <x:String>litry</x:String>
-                    <x:String>mililitry</x:String>
-                    <x:String>szklanki</x:String>
-                    <x:String>łyżeczki</x:String>
-                    <x:String>kilogramy</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-        </StackLayout>
-
-
-        
+    
+    <StackLayout Spacing="6" Margin="20">
+        <Label 
+            Text="{Binding SelectedProduct.Name}" 
+            FontSize="30" 
+            Margin="0,10,0,20"
+        />
+        <Entry 
+            x:Name="ValA"
+            Placeholder="Wartość" 
+            Keyboard="Numeric"
+            HeightRequest="42"
+            Text="{Binding ValueA}"
+            TextChanged="ValueA_PropertyChanged"
+        />
+        <Picker 
+            x:Name="picker1"
+            TitleColor="Silver"
+            ItemsSource="{Binding Units}"    
+            ItemDisplayBinding="{Binding Name}"
+            SelectedItem="{Binding UnitA}"
+            HeightRequest="42"
+            SelectedIndexChanged="UnitA_PropertyChanged"
+        />
+        <Label 
+            Text="=" 
+            FontSize="40" 
+            HorizontalOptions="Center"
+            Margin="0,0,0,4"
+        />
+        <Entry 
+            x:Name="ValB"
+            Placeholder="Wartość" 
+            Keyboard="Numeric"
+            HeightRequest="42"
+            Text="{Binding ValueB}"
+            TextChanged="ValueB_PropertyChanged"
+        />
+        <Picker 
+            x:Name="picker2"
+            TitleColor="Silver"
+            ItemsSource="{Binding Units}"    
+            ItemDisplayBinding="{Binding Name}"
+            SelectedItem="{Binding UnitB}"
+            HeightRequest="42"
+            SelectedIndexChanged="UnitB_PropertyChanged"
+        />
     </StackLayout>
 </ContentPage>

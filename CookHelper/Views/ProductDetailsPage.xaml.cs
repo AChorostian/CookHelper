@@ -24,5 +24,25 @@ namespace CookHelper.Views
             BindingContext = viewModel = new ProductDetailsViewModel(product);
         }
 
+        void ValueA_PropertyChanged(object sender, Xamarin.Forms.TextChangedEventArgs e)
+        {
+            viewModel.CalculateB();
+            ValB.Text = viewModel.ValueB.ToString();
+        }
+        void ValueB_PropertyChanged(object sender, Xamarin.Forms.TextChangedEventArgs e)
+        {
+            viewModel.CalculateA();
+            ValA.Text = viewModel.ValueA.ToString();
+        }
+        void UnitA_PropertyChanged(object sender, System.EventArgs e)
+        {
+            viewModel.CalculateB();
+            ValB.Text = viewModel.ValueB.ToString();
+        }
+        void UnitB_PropertyChanged(object sender, System.EventArgs e)
+        {
+            viewModel.CalculateB();
+            ValB.Text = viewModel.ValueB.ToString();
+        }
     }
 }
