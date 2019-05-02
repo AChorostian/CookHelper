@@ -6,7 +6,7 @@ namespace CookHelper.Models
 
     public class Unit : IComparable<Unit>
     {
-        public int Id;
+        public int Id { get; set; }
         public string Name { get; set; }
         public UnitBase Base { get; set; }
         public double Value { get; set; }

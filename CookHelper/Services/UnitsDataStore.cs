@@ -9,29 +9,32 @@ namespace CookHelper.Services
     public class UnitsDataStore : IDataStore<Unit>
     {
         public List<Unit> Units { get; set; }
+        public int nextId { get; set; }
 
         public UnitsDataStore()
         {
             Units = new List<Unit>
             {
-                new Unit { Name="gram" , Base=UnitBase.Weight , Value=1 },
-                new Unit { Name="dekagram" , Base=UnitBase.Weight , Value=10 },
-                new Unit { Name="kilogram" , Base=UnitBase.Weight , Value=1000 },
+                new Unit { Id=0 , Name="gram" , Base=UnitBase.Weight , Value=1 },
+                new Unit { Id=1 , Name="dekagram" , Base=UnitBase.Weight , Value=10 },
+                new Unit { Id=2 , Name="kilogram" , Base=UnitBase.Weight , Value=1000 },
 
-                new Unit { Name="mililitr" , Base=UnitBase.Volume , Value=1 },
-                new Unit { Name="litr" , Base=UnitBase.Volume , Value=1000 },
-                new Unit { Name="szklanka" , Base=UnitBase.Volume , Value=250 },
-                new Unit { Name="łyżka" , Base=UnitBase.Volume , Value=15 },
-                new Unit { Name="łyżeczka" , Base=UnitBase.Volume , Value=5 },
+                new Unit { Id=3 , Name="mililitr" , Base=UnitBase.Volume , Value=1 },
+                new Unit { Id=4 , Name="litr" , Base=UnitBase.Volume , Value=1000 },
+                new Unit { Id=5 , Name="szklanka" , Base=UnitBase.Volume , Value=250 },
+                new Unit { Id=6 , Name="łyżka" , Base=UnitBase.Volume , Value=15 },
+                new Unit { Id=7 , Name="łyżeczka" , Base=UnitBase.Volume , Value=5 },
 
-                new Unit { Name="sztuka" , Base=UnitBase.Amount , Value=1 },
-                new Unit { Name="tuzin" , Base=UnitBase.Amount , Value=12 }
+                new Unit { Id=8 , Name="sztuka" , Base=UnitBase.Amount , Value=1 },
+                new Unit { Id=9 , Name="tuzin" , Base=UnitBase.Amount , Value=12 }
             };
             Units.Sort();
+            nextId = 10;
         }
 
         public void AddItem(Unit item)
         {
+            item.Id = nextId++;
             Units.Add(item);
         }
 

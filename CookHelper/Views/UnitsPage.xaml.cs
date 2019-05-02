@@ -31,13 +31,17 @@ namespace CookHelper.Views
 
         void AddUnit(object sender, System.EventArgs e)
         {
-            viewModel.newUnit();
+            viewModel.AddUnit();
             UnitsLV.ItemsSource = viewModel.UnitsCollection;
         }
 
         async void DeleteUnit(object sender, EventArgs e)
         {
-            await DisplayAlert("Uwaga", "Czy na pewno chcesz usunąć tą jednostkę", "tak" , "nie" );
+            if (await DisplayAlert("Uwaga", "Czy na pewno chcesz usunąć tą jednostkę", "usuń" , "anuluj" ))
+            {
+                viewModel.DeleteUnit(int.Parse((sender as Button).CommandParameter.ToString()));
+                UnitsLV.ItemsSource = viewModel.UnitsCollection;
+            }
         }
     }
 }

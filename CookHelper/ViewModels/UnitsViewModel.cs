@@ -11,7 +11,6 @@ namespace CookHelper.ViewModels
     {
         public IEnumerable<Unit> UnitsCollection { get; set; }
         public string Title { get; set; }
-
         public UnitBase unitBase;
 
         public UnitsViewModel(UnitBase unitBase)
@@ -36,10 +35,16 @@ namespace CookHelper.ViewModels
             UnitsCollection = App.unitsDataStore.GetItems(unitBase);
         }
 
-        public void newUnit()
+        public void AddUnit()
         {
             Unit unit = new Unit { Name="Nowa jednostka" , Value=1 , Base = unitBase };
             App.unitsDataStore.AddItem(unit);
+            UnitsCollection = App.unitsDataStore.GetItems(unitBase);
+        }
+
+        public void DeleteUnit(int id)
+        {
+            App.unitsDataStore.DeleteItem(id);
             UnitsCollection = App.unitsDataStore.GetItems(unitBase);
         }
     }
