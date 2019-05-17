@@ -53,5 +53,14 @@ namespace CookHelper.Views
             // you are here ;)
         }
 
+        protected override void OnSizeAllocated(double width, double height)
+        {
+            base.OnSizeAllocated(width, height);
+
+            var orientation = DependencyService.Get<IDeviceOrientation>().GetOrientation();
+
+            if (orientation == DeviceOrientations.Landscape)
+                DisplayAlert("Hey!", "You have just changed device orientation. This feature is still in testing phase. We recommend you to use portait orientation, but it's not obligatory...", "ok");
+        }
     }
 }
