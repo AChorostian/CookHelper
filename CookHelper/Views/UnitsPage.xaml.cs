@@ -51,7 +51,7 @@ namespace CookHelper.Views
             var orientation = DependencyService.Get<IDeviceOrientation>().GetOrientation();
 
             if (orientation == DeviceOrientations.Landscape)
-                DisplayAlert("Hey!", "You have just changed device orientation. This feature is still in testing phase. We recommend you to use portait orientation, but it's not obligatory...", "ok");
+                DisplayAlert("Hej!", "Właśnie obrócono ekran. Ta opcja jest nadal w fazie testowania. Zalecamy używać domyślnej orientacji.", "ok");
         }
     }
 }

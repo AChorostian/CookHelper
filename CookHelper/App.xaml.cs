@@ -33,5 +33,7 @@ namespace CookHelper
         {
             // Handle when your app resumes
         }
+
+
     }
 }
