@@ -43,11 +43,6 @@ namespace CookHelper.Views
             App.Current.MainPage = new NavigationPage(new ProductsPage());
         }
 
-        void TabBar_RecipesPage(object sender, EventArgs e)
-        {
-            App.Current.MainPage = new NavigationPage(new RecipesPage());
-        }
-
         void TabBar_SettingsPage(object sender, EventArgs e)
         {
             // you are here ;)

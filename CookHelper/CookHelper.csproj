@@ -30,10 +30,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="Views\CustomTabBar.xaml" />
+    <EmbeddedResource Remove="Views\RecipesPage.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Views\CustomTabBar.xaml.cs" />
     <Compile Remove="ViewModels\BaseViewModel.cs" />
+    <Compile Remove="Views\RecipesPage.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Resources\TabBar\tab_products_active.png" />

@@ -8,6 +8,7 @@ using System.IO;
 using Xamarin.Forms;
 using Plugin.Media;
 using CookHelper.ViewModels;
+using CookHelper.Models;
 
 namespace CookHelper.Views
 {
@@ -16,10 +17,10 @@ namespace CookHelper.Views
     {
         AddProductViewModel viewModel;
 
-        public AddProductPage()
+        public AddProductPage( Product product )
         {
             InitializeComponent();
-            BindingContext = viewModel = new AddProductViewModel();
+            BindingContext = viewModel = new AddProductViewModel( product );
         }
 
         void NavBar_Cancel(object sender, EventArgs e)
@@ -40,7 +41,6 @@ namespace CookHelper.Views
 
         void first_Toggled(object sender, ToggledEventArgs e)
         {
-            viewModel.NewProduct.Weight = e.Value;
             double small = 42;
             double big = 84.5;
             if (e.Value)
@@ -58,7 +58,6 @@ namespace CookHelper.Views
 
         void second_Toggled(object sender, ToggledEventArgs e)
         {
-            viewModel.NewProduct.Volume = e.Value;
             double small = 42;
             double big = 84.5;
             if (e.Value)
@@ -76,7 +75,6 @@ namespace CookHelper.Views
 
         void third_Toggled(object sender, ToggledEventArgs e)
         {
-            viewModel.NewProduct.Amount = e.Value;
             double small = 42;
             double big = 84.5;
             if (e.Value)

@@ -97,6 +97,7 @@
                             VerticalOptions="Center" 
                             Margin="16,0" 
                             Toggled="first_Toggled"
+                            IsToggled="{Binding NewProduct.Weight}"
                         />
                     </Grid>
                 </Grid>
@@ -146,6 +147,7 @@
                             VerticalOptions="Center" 
                             Margin="16,0" 
                             Toggled="second_Toggled"
+                            IsToggled="{Binding NewProduct.Volume}"
                         />
                     </Grid>
                 </Grid>
@@ -195,7 +197,9 @@
                             HorizontalOptions="End" 
                             VerticalOptions="Center" 
                             Margin="16,0" 
-                            Toggled="third_Toggled"/>
+                            Toggled="third_Toggled"
+                            IsToggled="{Binding NewProduct.Amount}"
+                        />
                     </Grid>
                 </Grid>
             </StackLayout>

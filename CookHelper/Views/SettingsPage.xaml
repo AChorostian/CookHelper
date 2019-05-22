@@ -114,25 +114,6 @@
             </Grid>
             <Grid Grid.Column="1" Padding="4">
                 <Image 
-                    HeightRequest="28" 
-                    WidthRequest="28" 
-                    Source="{controls:ImageResource CookHelper.Resources.TabBar.tab_recipes.png}"
-                    HorizontalOptions="Center" 
-                    VerticalOptions="Start"
-                />
-                <Label 
-                    Text="Przepisy" 
-                    HorizontalOptions="Center" 
-                    VerticalOptions="End" 
-                    FontSize="10" 
-                    TextColor="White"
-                />
-                <Grid.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TabBar_RecipesPage" />
-                </Grid.GestureRecognizers>
-            </Grid>
-            <Grid Grid.Column="2" Padding="4">
-                <Image 
                     HeightRequest="28"
                     WidthRequest="28" 
                     Source="{controls:ImageResource CookHelper.Resources.TabBar.tab_settings_active.png}"

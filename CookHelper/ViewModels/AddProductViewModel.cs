@@ -13,12 +13,9 @@ namespace CookHelper.ViewModels
 
         public Product NewProduct { get; set; }
 
-        public AddProductViewModel()
+        public AddProductViewModel(Product product)
         {
-            NewProduct = new Product();
-            NewProduct.WeightValue = 0;
-            NewProduct.VolumeValue = 0;
-            NewProduct.AmountValue = 0;
+            NewProduct = product;
 
             SaveProductCommand = new Command(
                 execute: ()=>

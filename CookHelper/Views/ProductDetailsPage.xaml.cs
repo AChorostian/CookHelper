@@ -24,6 +24,11 @@ namespace CookHelper.Views
             BindingContext = viewModel = new ProductDetailsViewModel(product);
         }
 
+        void Handle_Clicked(object sender, System.EventArgs e)
+        {
+            Navigation.PushModalAsync(new NavigationPage(new AddProductPage(viewModel.SelectedProduct)));
+        }
+
         void ValueA_PropertyChanged(object sender, Xamarin.Forms.TextChangedEventArgs e)
         {
             viewModel.CalculateB();

@@ -59,7 +59,8 @@ namespace CookHelper.Views
 
         void NavBar_AddProduct(object sender, System.EventArgs e)
         {
-            Navigation.PushModalAsync( new NavigationPage( new AddProductPage() ));
+            Product product = new Product(); 
+            Navigation.PushModalAsync( new NavigationPage( new AddProductPage(product) ));
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
@@ -75,11 +76,6 @@ namespace CookHelper.Views
         void TabBar_ProductsPage(object sender, EventArgs e)
         {
             // you are here ;)
-        }
-
-        void TabBar_RecipesPage(object sender, EventArgs e)
-        {
-            App.Current.MainPage = new NavigationPage(new RecipesPage());
         }
 
         void TabBar_SettingsPage(object sender, EventArgs e)

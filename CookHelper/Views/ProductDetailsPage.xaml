@@ -9,8 +9,13 @@
     >
     <NavigationPage.TitleView> 
         <Grid>
-        <Button Text="Usuń" TextColor="White" HorizontalOptions="End" Margin="0,0,82,0"/>
-        <Button Text="Edytuj" TextColor="White" HorizontalOptions="End" Margin="0,0,12,0"/>
+        <Button 
+            Text="Edytuj"
+            TextColor="White"
+            HorizontalOptions="End"
+            Margin="0,0,12,0"
+            Clicked="Handle_Clicked"    
+        />
         </Grid>
     </NavigationPage.TitleView> 
     
