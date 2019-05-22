@@ -29,9 +29,13 @@ namespace CookHelper.Views
 
         async void NavBar_Submit(object sender, EventArgs e)
         {
-            viewModel.SaveProduct();
             await Navigation.PopModalAsync();
             App.Current.MainPage = new NavigationPage(new ProductsPage());
+        }
+
+        void ProductNameChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            viewModel.RefreshCommand();
         }
 
         void first_Toggled(object sender, ToggledEventArgs e)
@@ -49,6 +53,7 @@ namespace CookHelper.Views
                 var animation = new Animation(v => first.HeightRequest = v, big, small);
                 animation.Commit(this, "SimpleAnimation", 16, 300, Easing.CubicInOut, (v, c) => first.HeightRequest = small);
             }
+            viewModel.RefreshCommand();
         }
 
         void second_Toggled(object sender, ToggledEventArgs e)
@@ -66,6 +71,7 @@ namespace CookHelper.Views
                 var animation = new Animation(v => second.HeightRequest = v, big, small);
                 animation.Commit(this, "SimpleAnimation", 16, 300, Easing.CubicInOut, (v, c) => second.HeightRequest = small);
             }
+            viewModel.RefreshCommand();
         }
 
         void third_Toggled(object sender, ToggledEventArgs e)
@@ -83,6 +89,7 @@ namespace CookHelper.Views
                 var animation = new Animation(v => third.HeightRequest = v, big, small);
                 animation.Commit(this, "SimpleAnimation", 16, 300, Easing.CubicInOut, (v, c) => third.HeightRequest = small);
             }
+            viewModel.RefreshCommand();
         }
 
         protected override void OnSizeAllocated(double width, double height)

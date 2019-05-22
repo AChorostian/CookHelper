@@ -27,11 +27,12 @@
             <Button 
                 Text="Zapisz" 
                 FontSize="17" 
-                TextColor="#D18E69" 
+                TextColor="White" 
                 HorizontalOptions="End" 
                 Margin="8,0,8,0" 
                 FontAttributes="Bold" 
                 Clicked="NavBar_Submit"
+                Command="{Binding SaveProductCommand}"
             />
         </Grid>
     </NavigationPage.TitleView> 
@@ -44,6 +45,7 @@
                     MaxLength="25" 
                     VerticalOptions="Center"
                     Text="{Binding NewProduct.Name}"
+                    TextChanged="ProductNameChanged"
                 />
             </Grid>
         </Grid>
