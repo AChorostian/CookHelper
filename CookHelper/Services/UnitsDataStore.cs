@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,12 +9,12 @@ namespace CookHelper.Services
 {
     public class UnitsDataStore : IDataStore<Unit>
     {
-        public List<Unit> Units { get; set; }
+        public ObservableCollection<Unit> Units { get; set; }
         public int nextId { get; set; }
 
         public UnitsDataStore()
         {
-            Units = new List<Unit>
+            Units = new ObservableCollection<Unit>
             {
                 new Unit { Id=0 , Name="gram" , Base=UnitBase.Weight , Value=1 },
                 new Unit { Id=1 , Name="dekagram" , Base=UnitBase.Weight , Value=10 },
@@ -28,7 +29,6 @@ namespace CookHelper.Services
                 new Unit { Id=8 , Name="sztuka" , Base=UnitBase.Amount , Value=1 },
                 new Unit { Id=9 , Name="tuzin" , Base=UnitBase.Amount , Value=12 }
             };
-            Units.Sort();
             nextId = 10;
         }
 
@@ -56,16 +56,15 @@ namespace CookHelper.Services
             return Units.FirstOrDefault(s => s.Id == id);
         }
 
-        public List<Unit> GetItems()
+        public ObservableCollection<Unit> GetItems()
         {
-            Units.Sort();
             return Units;
         }
 
-        public IEnumerable<Unit> GetItems(UnitBase unitBase)
+        public ObservableCollection<Unit> GetItems(UnitBase unitBase)
         {
-            Units.Sort();
-            return Units.Where(u => u.Base == unitBase);
+            List<Unit> list = Units.ToList().Where(u => u.Base == unitBase).ToList();
+            return new ObservableCollection<Unit>(list);
         }
 
     }

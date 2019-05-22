@@ -16,6 +16,8 @@ namespace CookHelper.Views
 {
     public partial class ProductsPage : ContentPage
     {
+
+        String searchText { get; set; }
         ProductsViewModel viewModel;
 
         public ProductsPage()
@@ -41,6 +43,18 @@ namespace CookHelper.Views
                 searchBar.TranslateTo(0, 0, 300, Easing.CubicOut),
                 defaultBar.TranslateTo(0, 44, 300, Easing.CubicOut)
             );
+        }
+
+        void searchTextChanged(object sender, Xamarin.Forms.TextChangedEventArgs e)
+        {
+            ProductsLV.BeginRefresh();
+
+            if (string.IsNullOrWhiteSpace(e.NewTextValue))
+                ProductsLV.ItemsSource = viewModel.ProductsCollection;
+            else
+                ProductsLV.ItemsSource = viewModel.ProductsCollection.Where(i => i.Name.Contains(e.NewTextValue));
+
+            ProductsLV.EndRefresh();
         }
 
         void NavBar_AddProduct(object sender, System.EventArgs e)

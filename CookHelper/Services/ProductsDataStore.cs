@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using CookHelper.Models;
@@ -8,11 +9,11 @@ namespace CookHelper.Services
 {
     public class ProductsDataStore : IDataStore<Product>
     {
-        public List<Product> Products { get; set; }
+        public ObservableCollection<Product> Products { get; set; }
 
         public ProductsDataStore()
         {
-            Products = new List<Product>
+            Products = new ObservableCollection<Product>
             {
                 new Product { Name="Mleko" , Weight=true , Volume=true , Amount=true , WeightValue=1000 , VolumeValue=1000 , AmountValue=1 },
                 new Product { Name="Cukier" , Weight=true , Volume=true , Amount=true , WeightValue=1000 , VolumeValue=1250 , AmountValue=1 },
@@ -32,7 +33,6 @@ namespace CookHelper.Services
                 new Product { Name="Bułka tarta" , Weight=true , Volume=true , WeightValue=150 , VolumeValue=250 },
                 new Product { Name="Miód" , Weight=true , Volume=true , WeightValue=360 , VolumeValue=250 }
             };
-            Products.Sort();
         }
 
         public void AddItem(Product item)
@@ -58,9 +58,8 @@ namespace CookHelper.Services
             return Products.FirstOrDefault(s => s.Id == id);
         }
 
-        public List<Product> GetItems()
+        public ObservableCollection<Product> GetItems()
         {
-            Products.Sort();
             return Products;
         }
 

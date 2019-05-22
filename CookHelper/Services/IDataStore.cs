@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 
 namespace CookHelper.Services
@@ -11,6 +11,6 @@ namespace CookHelper.Services
         void DeleteItem(int id);
         T    GetItem(int id);
 
-        List<T> GetItems();
+        ObservableCollection<T> GetItems();
     }
 }

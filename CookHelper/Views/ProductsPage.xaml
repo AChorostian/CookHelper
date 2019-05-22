@@ -12,6 +12,8 @@
             <Grid x:Name="searchBar" TranslationY="-44" HeightRequest="44">
                 <controls:CustomSearchBar 
                     x:Name="searchBox" 
+                    Text="{Binding searchText}" 
+                    TextChanged="searchTextChanged"
                     CancelButtonColor="Black"
                     >
                     
