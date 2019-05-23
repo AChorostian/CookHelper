@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CookHelper.iOS", "CookHelpe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CookHelper", "CookHelper\CookHelper.csproj", "{5EBAC5AD-CAE6-4970-8267-E4BB6B9DB3B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CookHelperTest", "CookHelperTest\CookHelperTest.csproj", "{BBE5E5D6-DEED-4A87-85E3-892E9E3701B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,5 +55,17 @@ Global
 		{5EBAC5AD-CAE6-4970-8267-E4BB6B9DB3B3}.Debug|iPhone.Build.0 = Debug|Any CPU
 		{5EBAC5AD-CAE6-4970-8267-E4BB6B9DB3B3}.Release|iPhone.ActiveCfg = Release|Any CPU
 		{5EBAC5AD-CAE6-4970-8267-E4BB6B9DB3B3}.Release|iPhone.Build.0 = Release|Any CPU
+		{BBE5E5D6-DEED-4A87-85E3-892E9E3701B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBE5E5D6-DEED-4A87-85E3-892E9E3701B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBE5E5D6-DEED-4A87-85E3-892E9E3701B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBE5E5D6-DEED-4A87-85E3-892E9E3701B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBE5E5D6-DEED-4A87-85E3-892E9E3701B5}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{BBE5E5D6-DEED-4A87-85E3-892E9E3701B5}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{BBE5E5D6-DEED-4A87-85E3-892E9E3701B5}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{BBE5E5D6-DEED-4A87-85E3-892E9E3701B5}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{BBE5E5D6-DEED-4A87-85E3-892E9E3701B5}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{BBE5E5D6-DEED-4A87-85E3-892E9E3701B5}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{BBE5E5D6-DEED-4A87-85E3-892E9E3701B5}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{BBE5E5D6-DEED-4A87-85E3-892E9E3701B5}.Release|iPhone.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

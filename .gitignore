@@ -4,6 +4,9 @@ CookHelper.Android/bin/*
 CookHelper.iOS/obj/*
 CookHelper.iOS/bin/*
 
+CookHelperTest/obj/*
+CookHelperTest/bin/*
+
 CookHelper/obj/*
 CookHelper/bin/*
 
@@ -12,6 +15,4 @@ CookHelper/bin/*
 *.props
 *.targets
 *.DS_Store
-CookHelper/.DS_Store
-CookHelper/.DS_Store
-CookHelper/.DS_Store
+*/.DS_Store
