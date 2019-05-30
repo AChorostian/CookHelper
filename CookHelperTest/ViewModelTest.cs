@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using CookHelper.Models;
 using CookHelper.ViewModels;
 
 namespace Tests
@@ -11,9 +12,11 @@ namespace Tests
         }
 
         [Test]
-        public void Test1()
+        public void WeightUnitsViewModelTest()
         {
-            Assert.Pass();
+            UnitsViewModel viewModel = new UnitsViewModel(UnitBase.Weight);
+
+            Assert.AreEqual("Jednostki wagi", viewModel.Title);
         }
     }
 }

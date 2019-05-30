@@ -24,7 +24,7 @@ namespace Tests
                 Assert.IsFalse(product.Amount);
                 Assert.IsFalse(product.Volume);
 
-                Assert.Equals("Cukier", product.Name);
+                Assert.AreEqual("Cukier", product.Name);
                 Assert.AreNotEqual(0, product.Id);
             });
         }
@@ -41,9 +41,9 @@ namespace Tests
 
             Assert.Multiple(() =>
             {
-                Assert.Equals("dekagram", unit.Name);
-                Assert.Equals(UnitBase.Weight, unit.Base);
-                Assert.Equals(10, unit.Value);
+                Assert.AreEqual("dekagram", unit.Name);
+                Assert.AreEqual(UnitBase.Weight, unit.Base);
+                Assert.AreEqual(10, unit.Value);
                 Assert.AreNotEqual(0, unit.Id);
             });
         }
