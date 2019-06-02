@@ -35,6 +35,24 @@ namespace CookHelper.ViewModels
             UnitB = Units[1];
         }
 
+        public ProductDetailsViewModel(Product product, IDataStore<Unit> dataStore)
+        {
+            SelectedProduct = product;
+            Units = new List<Unit>();
+
+            if (SelectedProduct.Weight)
+                Units.AddRange((dataStore as UnitsDataStore).GetItems(UnitBase.Weight));
+            if (SelectedProduct.Volume)
+                Units.AddRange((dataStore as UnitsDataStore).GetItems(UnitBase.Volume));
+            if (SelectedProduct.Amount)
+                Units.AddRange((dataStore as UnitsDataStore).GetItems(UnitBase.Amount));
+
+            ValueA = 0;
+            UnitA = Units[0];
+            ValueB = 0;
+            UnitB = Units[1];
+        }
+
         public void CalculateA()
         {
             double baseValueB = ValueB * UnitB.Value;

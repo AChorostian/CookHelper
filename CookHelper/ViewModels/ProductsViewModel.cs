@@ -21,6 +21,11 @@ namespace CookHelper.ViewModels
 
         }
 
+        public ProductsViewModel(IDataStore<Product> dataStore)
+        {
+            ProductsCollection = dataStore.GetItems();
+        }
+
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
